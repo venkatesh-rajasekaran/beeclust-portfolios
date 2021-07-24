@@ -1,0 +1,23 @@
+{
+    "endoscopyDoctors" : [
+        "Endoscopy Demo Doctor1", 
+        "Endoscopy Demo Doctor2", 
+        "Endoscopy Demo Doctor3"
+    ],
+    "ultrasoundDoctors" : [
+        "Ultrasound Doctor1", 
+        "Ultrasound Doctor5", 
+        "Ultrasound Doctor6", 
+        "Ultrasound Doctor7"
+    ],
+    "sonographers" : [
+        "Sonographer1",
+        "Sonographer2",
+        "Sonographer3"
+    ],
+    "referringPhysicians" : [
+        "referredDoctor1",
+        "referredDoctor2",
+        "referredDoctor3"
+    ]
+}

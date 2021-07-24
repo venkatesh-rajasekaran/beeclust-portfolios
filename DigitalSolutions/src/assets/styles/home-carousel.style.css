@@ -1,0 +1,56 @@
+ngb-carousel .wrapper 
+{
+    position: relative;
+    height: 500px;
+    padding-top: 16%; /* Keep ratio for 900x500 images */
+    @media screen and (max-width: 1100px){
+        padding-top: 45%;
+    }
+}
+  
+@media screen and (max-device-width: 767px) {
+    ngb-carousel .wrapper {
+        height: 200px;
+    }
+}
+
+ngb-carousel .wrapper>img 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+
+.selectDisable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.carousel-caption {
+    color: black;
+}
+
+.carousel-inner {
+    height: 500px;
+}
+
+@media screen and (max-device-width: 767px) {
+    .service-header__title {
+        font-size: 3.25em;     
+    }
+
+    .shorttag {
+        line-height: 20px;
+    }
+
+    .carousel-inner {
+        height: 200px;
+    }
+}
+  
