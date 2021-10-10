@@ -1,0 +1,153 @@
+<div class="container">	
+	<h2 class="alignleft">Upper GI Endoscopy Report</h2>
+	<br><br>
+	<hr>
+	<h2 class="logo">Demo Hospital</h2>
+	<p style="color:#004d40">Demo Surgery Center</p>
+	<p>135 Broadway
+		<br>Nungambakkam, Chennai </p>
+	<hr>
+	<form #patientForm="ngForm" (ngSubmit)="onSubmit(patientForm.value)">
+		<label>Patient Name:</label>
+		<mat-form-field>
+			<mat-label>Enter Patient Name</mat-label>
+			<input matInput #nameRef="ngModel" name="patientName" ngModel required minlength="4"> </mat-form-field>
+			<div *ngIf="nameRef.errors &&(nameRef.dirty||nameRef.touched)">
+				<div [hidden]="!nameRef.errors.required" >
+					<p style="color:red;">Please Enter a Name</p>
+				</div>
+				<div [hidden]="!nameRef.errors.minlength" >
+					<p style="color: red;">Please Enter atleast 4 characters</p>
+				</div>
+			</div>
+		<br>
+		<label>Date of Birth</label>
+		<mat-form-field>
+			<mat-label>Enter date of birth</mat-label>
+			<input matInput [matDatepicker]="picker_dob" name="dateOfBirth" ngModel (dateInput)="onDateOfBirthChangeEvent($event)" (dateChange)="onDateOfBirthChangeEvent($event)">
+			<mat-datepicker-toggle matSuffix [for]="picker_dob"></mat-datepicker-toggle>
+			<mat-datepicker #picker_dob startView="year"></mat-datepicker>
+		</mat-form-field>
+		<br>
+		<label>Age</label>
+		<mat-form-field>
+			<input matInput name="patientAge" [(ngModel)]="patientAge" readonly>
+		</mat-form-field>
+		<br>
+		<label>Record Number</label>
+		<mat-form-field>
+			<mat-label>Enter Record Number</mat-label>
+			<input matInput #refnumber="ngModel" pattern="^[0-9][1-9]{4}$" maxlength="6" name="recordNumber" ngModel required> 
+		</mat-form-field>
+		<div *ngIf="refnumber.errors &&(refnumber.dirty||refnumber.touched)">
+			<div [hidden]="!refnumber.errors.pattern" >
+				<p style="color: red;">Please Enter a five digit number</p>
+			</div>
+		</div>
+		<br>
+		<label>Date / Time of Procedure</label>
+		<mat-form-field>
+			<input matInput [matDatepicker]="picker" name="dateOfProcedure" ngModel>
+			<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+			<mat-datepicker #picker></mat-datepicker>
+		</mat-form-field>
+		<br>
+		<label>Referring Physician: </label>
+		<mat-form-field>
+			<mat-label>Referring Physician</mat-label>
+			<mat-select [(value)]="selectedValue" name="Physician" ngModel>
+				<mat-option *ngFor="let referringPhysician of referringPhysicians" [value]="referringPhysician">
+					{{referringPhysician}}
+				</mat-option>
+			</mat-select>	
+		</mat-form-field>
+		<br>
+		<label>Endoscopist: </label>
+		<mat-form-field>
+			<mat-label>Endoscopist</mat-label>
+			<mat-select [(value)]="selectedEndoscopist" name="endoscopist" ngModel>
+				<mat-option *ngFor="let endoscopyDoctor of endoscopoyDoctors" [value]="endoscopyDoctor">
+					{{endoscopyDoctor}}
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<hr>
+		<label style="color:blue">PROCEDURE PERFORMED :</label>
+		<mat-form-field>
+			<mat-label>Procedure Peformed</mat-label>
+			<input matInput placeholder="Procedure Performed" name="procedurePeformed" ngModel> </mat-form-field>
+		<br>
+		<br>
+		<label style="color:blue">INDICATIONS FOR EXAMINATION :</label>
+		<mat-form-field>
+			<input matInput placeholder="Indications of Examinations" name="indications" ngModel> </mat-form-field>
+		<br>
+		<br>
+		<label style="color:blue">FINDINGS - ESOPHAGUS</label>
+		<br>
+		<label style="color:blue">Esophagus :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Esophagus value" name="esophagus" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">GO Junction :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter GO Junction value" name="goJunction" ngModel> </mat-form-field>
+		<br>
+		<br>
+		<label style="color:blue">FINDINGS - STOMACH</label>
+		<br>
+		<label style="color:blue">Fundus :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Fundus value" name="fundus" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">Body :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Body value" name="body" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">Antrum :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Antrum value" name="antrum" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">Pylorus :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Pylorus value" name="pylorus" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">FINDINGS - DUODENUM</label>
+		<br>
+		<label style="color:blue">First Part :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter First part value" name="firstPart" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">Second Part :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Second part value" name="secondPart" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">ENDOSCOPIC DIAGNOSIS :</label>
+		<mat-form-field>
+			<input matInput placeholder="Endoscopic Diagnosis" name="diagnosis" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">RECOMMENDATIONS : </label>
+		<mat-form-field>
+			<input matInput placeholder="Recommendations" name="recommendations" ngModel> </mat-form-field>
+		<br>
+		<br>
+		<hr>
+		<label style="color:blue">PROCEDURE TECHNIQUE :</label>
+		<mat-form-field style="width: 500px;">
+			<textarea matNativeControl
+						cdkTextareaAutosize
+						cdkAutosizeMinRows="5"
+						cdkAutosizeMaxRows="10"
+		 				placeholder="Procedure Technique" 
+						 name="procTechnique" ngModel>
+			</textarea>
+		</mat-form-field>
+		<hr>
+		<label>Signature:<br><br> _________________________________  (Dr.Endoscopist)</label>      
+		<br>
+	<div class="buttons">
+	<button mat-raised-button style="margin-left: 350px">Publish Report</button>	
+	<button mat-raised-button (click)="onCallPictureReport(patientForm.value)">Image Report</button>	
+</div>
+</form>
+</div>

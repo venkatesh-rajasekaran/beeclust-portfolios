@@ -1,0 +1,52 @@
+.container{
+    width: 900px;
+    margin-left:100px;
+    margin-right:-50;
+    margin-top: 50px;
+    
+}
+.logo
+{
+    margin-top: 25px;
+    font-size: 25px;
+    font-weight: bolder;
+    
+}
+.logo_blue {
+    margin-top: 25px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: blue;
+}
+
+hr {
+    border-bottom: 2px solid;
+    width: 900px;
+    
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+.aligncenter {
+    float: left;  
+}
+
+h2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.form-control {
+    margin-left: 20px;
+    margin-top: 10px;    
+}
+
+label {
+    width: 250px;
+    display: inline-block;
+}

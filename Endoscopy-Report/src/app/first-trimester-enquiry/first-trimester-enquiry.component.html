@@ -1,0 +1,159 @@
+<div class="container">
+	<h2 class="alignleft">First Trimester Report</h2>
+	<br><br>
+	<hr>
+	<h2 class="logo">Demo Hospital</h2>
+	<p style="color:#004d40">Demo Surgery Center</p>
+	<p>135 Broadway
+		<br>Nungambakkam, Chennai </p>
+	<hr>
+	<form #patientForm="ngForm">
+		<label>Patient Name:</label>
+		<mat-form-field>
+			<mat-label>Enter Patient Name</mat-label>
+			<input matInput name="patientName" ngModel> </mat-form-field>
+		<br>
+		<label>Date of Birth</label>
+		<mat-form-field>
+			<mat-label>Enter date of birth</mat-label>
+			<input matInput [matDatepicker]="picker_dob" name="dateOfBirth" ngModel>
+			<mat-datepicker-toggle matSuffix [for]="picker_dob"></mat-datepicker-toggle>
+			<mat-datepicker #picker_dob startView="year"></mat-datepicker>
+		</mat-form-field>
+		<br>
+		<label>Record Number</label>
+		<mat-form-field>
+			<mat-label>Enter Record Number</mat-label>
+			<input matInput name="recordNumber" ngModel> </mat-form-field>
+		<br>
+		<label>Date / Time of Procedure</label>
+		<mat-form-field>
+			<input matInput [matDatepicker]="picker" name="dateOfProcedure" ngModel>
+			<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+			<mat-datepicker #picker></mat-datepicker>
+		</mat-form-field>
+		<br>
+		<label>Referring Physician: </label>
+		<mat-form-field>
+			<mat-label>Referring Physician</mat-label>
+			<mat-select [(value)]="selectedValue" name="referringPhysician" ngModel>
+				<mat-option>None</mat-option>
+				<mat-option value="frank">Frank Black, MD</mat-option>
+				<mat-option value="demodoctor1">Demo Doctor2</mat-option>
+				<mat-option value="demodoctor2">Demo Doctor3</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<br>
+		<label>Endoscopist: </label>
+		<mat-form-field>
+			<mat-label>Endoscopist</mat-label>
+			<mat-select [(value)]="selectedValue" name="endoscopist" ngModel>
+				<mat-option>None</mat-option>
+				<mat-option value="debbie">Debbie Doe, MD</mat-option>
+				<mat-option value="demodoctor1">Demo Doctor2</mat-option>
+				<mat-option value="demodoctor2">Demo Doctor3</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<hr>
+		<label style="color:blue">INDICATIONS FOR EXAMINATION :</label>
+		<mat-form-field>
+			<input matInput placeholder="Indications of Examinations" name="indications" ngModel> </mat-form-field>
+		<br>
+		<br>
+		<label style="color:blue">HISTORY :</label>
+		<mat-form-field>
+			<input matInput placeholder="History" name="history" ngModel> </mat-form-field>
+		<br>
+		<br> 
+		<label style="color:blue">Maternal Assessment :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Esophagus value" name="esophagus" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">PROCEDURE TECHNIQUE :</label>
+		<mat-form-field>
+			<textarea matNativeControl placeholder="Procedure Technique" name="procTechnique" ngModel></textarea>
+		</mat-form-field>
+		<br>		
+		<label style="color:blue">Pragnancy :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Pragnancy value" name="pragnancy" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">Gestational Age :</label>
+		<table  class="gaTable">
+		  <tr>
+			<th></th>
+			<th style="text-align: left;">Date</th><th align="left">Details</th><th>Gest. Age</th> <th>EDD</th>
+		  </tr>
+		  <tr>
+			<td>LMP</td>
+            <td align="left">
+                <mat-form-field>
+                    <input placeholder="Enter LMP date" matInput [matDatepicker]="lmpDatePicker" name="lmpDate" ngModel>
+                    <mat-datepicker-toggle matSuffix [for]="lmpDatePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #lmpDatePicker></mat-datepicker>
+                </mat-form-field>
+            </td>
+            <td>LMP</td>
+            <td>12 w + 1 d</td>
+            <td>7/21/2021</td>
+		  </tr>
+		  <tr>
+			<td>U/S</td>
+            <td>
+                <mat-form-field>
+                    <input placeholder="Enter UltraSound LMP date" matInput [matDatepicker]="usLmpDatePicker" name="uslmpDate" ngModel>
+                    <mat-datepicker-toggle matSuffix [for]="usLmpDatePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #usLmpDatePicker></mat-datepicker>
+                </mat-form-field>
+            </td>
+            <td>Based on CRL measurement</td><td>12 w + 1 d</td><td>7/21/2021</td>
+		  </tr>
+		  <tr>
+			<td>Assigned Gest. Age</td><td>Based on Ultrasound(CRL), selected on 01/07/2021</td><td>12 w + 1 d</td><td>7/21/2021</td>
+		  </tr>
+		</table>		
+		<br>
+		<br>
+		<label style="color:blue">GENERAL EVALUATION</label>
+		<br>
+		<label style="color:blue">Cardiac Activity :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Cardiac Activity value" name="cardiacActivity" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">Placenta :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Placenta value" name="placenta" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">Amniotic Fluid :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Amniotic Fluid value" name="amnioticFluid" ngModel> </mat-form-field>
+		<br> 
+		<label style="color:blue">Fetal Biometry</label>
+		<br>
+		<label style="color:blue">Fetal Heart Rate :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Fetal Heart Rate value" name="fetalHeartRate" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">Crown-rump length :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Crown-rump length value" name="crownRumpLength" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">Nuchal translucency :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Nuchal translucency value" name="nuchalTranslucency" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">Nasal bone :</label>
+		<mat-form-field>
+			<input matInput placeholder="Enter Nasal bone value" name="nasalBone" ngModel> </mat-form-field>
+		<br>
+		<label style="color:blue">FRIST TRIMESTER ANATOMY :</label>
+		<mat-form-field>
+			<input matInput placeholder="First Trimester Anatomy value" name="trimesterAnatomy" ngModel> </mat-form-field>
+		<br>
+		<br>
+		<hr>
+		<label>Signature:<br><br> _________________________________  (Dr.Endoscopist)</label>
+		<br>
+		<button mat-raised-button style="margin-left: 350px" color="primary">Submit</button>
+</form>
+</div>
