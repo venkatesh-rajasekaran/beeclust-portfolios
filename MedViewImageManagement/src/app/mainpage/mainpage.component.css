@@ -1,0 +1,21 @@
+.navbar {
+    width:1172px;
+    justify-content: space-between;
+}
+
+span {
+    padding-right: 20px;
+}
+
+.mat-toolbar {    
+    background-color:#252525;
+    color: white;
+    font-size: 20px;
+    height: 50px;
+}
+
+.mat-flat-button{
+    background: teal;
+    color: white;
+    font-size: 15px;
+}
