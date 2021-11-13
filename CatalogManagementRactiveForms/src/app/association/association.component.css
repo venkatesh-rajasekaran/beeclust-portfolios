@@ -1,0 +1,78 @@
+#container1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+    /* margin-top: 40px; */
+    width:450px;
+}
+table
+{
+    border: 1px solid grey;
+    font-size:12px;
+    
+    width:500px;
+}
+td,th,tr
+{
+    
+    border-right: 1px solid grey;
+    padding: 3px;
+}
+th
+{
+    background-color: darkgray !important;
+    color:white;
+    text-align: center;
+    font-size:12px;
+}
+.mat-select
+{
+    width:150px;
+}
+.mat-header-cell
+{
+    padding:10px;
+}
+tr:nth-child(odd)
+{
+    background-color: lightgray;
+}
+.mat-icon
+{
+    margin-left: 20px;
+}
+.full-width{
+    width: 100%;
+}
+
+.top-padding{
+    padding-top: 3px;
+}
+
+.margin-left mat-radio-button:not(:first-child){
+    margin-left:10px;
+}
+
+.form-container{
+    margin: 100px;
+}
+
+button
+{
+    /* align-items: center; */
+    margin: auto 0;
+    
+}
+.mat-raised-button:nth-child(2)
+{
+    color: lime !important;
+    background-color: lightgray;
+}
+.mat-raised-button:nth-child(1)
+{
+    color:#dd0000;
+    background-color: lightgray;
+
+}

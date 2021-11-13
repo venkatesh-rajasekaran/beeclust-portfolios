@@ -1,0 +1,29 @@
+.outline{border-radius:8;border-style: solid;border-width: 3px;border-color: rgb(3, 33, 99);padding: 25px;}
+
+#outline{width:45%;}
+
+.mat-card{width:auto;align-content: center;}
+
+ div{display: flex;justify-content: center;align-items: center;background-color: #B0C4DE;}
+
+.example-card{padding:2%;background-color :white;width:60%;margin:5px;}
+
+.my-custom-class{background-color: #577eb1;font-size:30px;width:40%;}
+
+#p{width:40%;}
+
+.mat-icon{color:rgb(53, 53, 212);font-size: 28px;}
+
+ .mat-form-field{width:285px;}
+  
+ .mat-card-header{background-color: rgb(3, 33, 99);}
+
+#button{
+    background-color: white;border:2px solid white;height: 38px;
+    margin-left: 9px;color:rgb(17, 17, 168);text-align: center;
+  } 
+
+  #next{float: right;margin-top: 62%;margin-bottom: 1%;}
+  
+  #prev{float: right;margin-top: 62%;margin-bottom: 1%;}
+  

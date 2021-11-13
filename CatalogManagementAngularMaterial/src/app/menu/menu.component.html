@@ -1,0 +1,17 @@
+
+<mat-card> <span id="span1"><b>Catalog Management</b></span>
+    <button mat-button [matMenuTriggerFor]="menu"><span style="color: navy;font-weight: 700;">Products</span></button>&nbsp;
+    <mat-menu   #menu="matMenu" >&nbsp;
+    <button mat-button (click)='action5()' class="center">Home</button><br><br>   
+    <button mat-button (click)='action()' class="center">Product Item</button><br><br>
+    <button mat-button (click)='action1()' class="center" >Association Item</button><br><br>
+    <button mat-button (click)='action2()' class="center" >UOM Details</button><br><br>
+    <button mat-button (click)='action3()' class="center" >Classification</button><br><br>
+    <button mat-button (click)='action4()' class="center" >Catalog Configuration</button><br><br>
+    </mat-menu>
+</mat-card>
+<router-outlet></router-outlet>
+
+
+
+ 

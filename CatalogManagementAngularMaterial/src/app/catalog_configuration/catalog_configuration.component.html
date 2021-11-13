@@ -1,0 +1,73 @@
+<div>
+    <mat-card class="example-card" style="border: navy;border-style: solid;">
+        <button mat-stroked-button id="btn">
+            <mat-icon>mood</mat-icon>Other Attributes
+        </button><button mat-stroked-button id="btn">
+            <mat-icon>folder</mat-icon>Association
+        </button><button mat-stroked-button id="btn">
+            <mat-icon>cloud_download</mat-icon>Node Item
+        </button><button mat-stroked-button id="btn">
+            <mat-icon>create_new_folder</mat-icon>Available services
+        </button><button mat-stroked-button id="btn">
+            <mat-icon>share</mat-icon>Item Instructions
+        </button><br>
+        <button mat-stroked-button id="btn">
+            <mat-icon>people</mat-icon>Primary Info
+        </button><button mat-stroked-button id="btn1">
+            <mat-icon>pages</mat-icon>Units Of Measures
+        </button><button mat-stroked-button id="btn1">
+            <mat-icon>ballot</mat-icon>Inventory Info
+        </button><button mat-stroked-button id="btn1">
+            <mat-icon>drafts</mat-icon>Classifications
+        </button><br>
+
+        <fieldset>
+            <legend>Additional Attributes</legend>
+            <span style="padding-left: 5%;"></span>Attr&nbsp;<input class="my-custom-class" matInput><span
+                style="padding-left: 20%;"></span>References&nbsp;<input class="my-custom-class" matInput>
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend>Aliases</legend>
+            UPC code<span style="padding-left: 5%;"></span><input class="my-custom-class" matInput>
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend>Item Execluted Codes</legend>
+            <div class="left">
+                <fieldset>
+                    <legend>Available</legend>
+                    <mat-list>
+                        <mat-list-item><button mat-stroked-button style="border-color:darkcyan;width:100%;">Item
+                                Exclusion code</button></mat-list-item>
+                        <mat-list-item><button mat-stroked-button
+                                style="background-color: darkcyan;width:100%;color:white;text-align: left;">DEFAULT</button>
+                        </mat-list-item>
+                        <mat-list-item></mat-list-item>
+                    </mat-list>
+                </fieldset>
+            </div>
+
+            <button mat-stroked-button style="margin-left: 15%;margin-top: 5%;">
+                <mat-icon style="color: blue;">east</mat-icon><br>
+                <mat-icon style="color: blue;">west</mat-icon>
+            </button>
+
+            <div class="right">
+                <fieldset>
+                    <legend>Subscribed</legend>
+                    <mat-list>
+                        <mat-list-item><button mat-stroked-button
+                                style="border-style:dotted;border-color:darkcyan;width:100%;">Item Exclusion
+                                code</button></mat-list-item>
+                        <mat-list-item></mat-list-item>
+                        <mat-list-item></mat-list-item>
+                    </mat-list>
+                </fieldset>
+            </div>
+        </fieldset>
+
+    </mat-card><br>
+  <!--  <button mat-button (click)='action()' id="prev"
+        style="background-color: navy;color: whitesmoke;border-radius: 2px;">Prev</button>-->
+</div>

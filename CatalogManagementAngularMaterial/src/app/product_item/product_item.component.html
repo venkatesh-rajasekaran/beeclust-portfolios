@@ -1,0 +1,43 @@
+<div class="card-wrapper">
+  <br>
+  <mat-card class="example-card">
+
+    <mat-card-content class="outline">
+      <span style="padding-right: 40%;color: navy;font-weight: 600;">Item ID</span> <input class="my-custom-class"
+        matInput> <br><br>
+      <span style="padding-right: 43%;color: navy;font-weight: 600;">UOM</span>
+
+      <mat-form-field appearance="fill">
+        <mat-select>
+          <mat-option *ngFor="let uom_value of catalogs" [value]="uom_value.uom">
+            {{uom_value.uom}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field><br>
+
+      <span style="padding-right: 27%;color: navy;font-weight: 600;">Short Description</span><input
+        class="my-custom-class" matInput><br><br>
+      <span style="padding-right: 31%;color: navy;font-weight: 600;">Master catalog</span>
+      <mat-form-field appearance="fill" id="outline1">
+        <mat-select>
+          <mat-option *ngFor="let masters of catalogs" [value]="masters.master">
+            {{masters.master}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button id="button">
+        <mat-icon aria-label="Example icon-button with a heart icon">school</mat-icon>
+      </button>
+      <br>
+
+      <span style="color: navy;font-weight: 600;">Used As Container for Packing
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<mat-checkbox></mat-checkbox>
+
+    </mat-card-content>
+  </mat-card>
+  <!--<button mat-button (click)='action()'  id="next"
+    style="background-color:navy;color: whitesmoke;border-radius: 5px;">Next</button><br>
+  <span style="padding: 1%;"></span>-->
+
+</div>

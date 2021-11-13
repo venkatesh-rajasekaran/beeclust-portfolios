@@ -1,0 +1,41 @@
+#inventoryInfo
+{
+    width: 804px;
+    height:390px;
+    margin:0 auto;
+    /* margin-top:20px; */
+    padding:10px 10px;
+    font-weight: 400;   
+    background-color:lightgray;
+}
+tr:nth-child(even)
+{
+    background-color: lightgrey;
+}
+
+tr
+{
+    border: 1px solid darkgray;
+}
+td:nth-child(2)
+{
+    border: 1px solid darkgray;
+    
+}
+tr:nth-child(8)
+{
+    background-color: white;
+    border-top: 1px solid white;
+}
+td
+{
+    padding:5px;
+}
+tr:nth-child(6)
+{
+   border-bottom: 1px solid grey; 
+}
+.mat-select
+{
+    width:150px;
+}

@@ -1,0 +1,56 @@
+<br>
+<p>Create Product item</p>
+<div id="container">
+    <form [formGroup]="Aboutproduct" class="form-container">
+        <table class="mat-table table-success">
+
+            <tr class="mat-row">
+                <td class="mat-cell">Item id</td>
+                <td class="mat-cell">
+                    <mat-form-field>
+                        <input id="inp" formControlName="itemid" name="itemid" matInput placeholder="Enter itemid">
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr class="mat-row">
+                <td class="mat-cell">UOM</td>
+                <td class="mat-cell">
+                    <mat-select formControlName="uom" placeholder="Select an option"
+                        (selectionChange)="onUnitchange($event)">
+                        <mat-option [value]=productunit.unit *ngFor="let productunit of allunits">{{productunit.unit}}
+                        </mat-option>
+                    </mat-select>
+                </td>
+            </tr>
+            <tr class="mat-row">
+                <td class="mat-cell">Short Description</td>
+                <td class="mat-cell">
+                    <mat-form-field>
+                        <input matInput type="text" formControlName="description" placeholder="Eg:- Feel happy.">
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr class="mat-row">
+                <td class="mat-cell">Master Catalogue</td>
+                <td class="mat-cell">
+                    <mat-select id="id1" formControlName="masterCatalogue" placeholder="Select an option">
+                        <mat-option value="Enable">Enable</mat-option>
+                        <mat-option value="Disable">Disable</mat-option>
+                    </mat-select>
+                    <mat-icon>folder</mat-icon>
+                </td>
+            </tr>
+
+            <tr class="mat-row">
+                <td class="mat-cell">Used as container for packing </td>
+                <td class="mat-cell">
+                    <mat-checkbox formControlName="condition"></mat-checkbox>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <button (click)="display()" class="btn btn-success" id='submitbtn' type="submit">Submit</button>
+    </form>
+</div>
+<br><br><br><br>
+<br>

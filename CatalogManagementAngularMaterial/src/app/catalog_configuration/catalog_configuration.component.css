@@ -1,0 +1,21 @@
+div{display: flex;justify-content: center;align-items: center;background-color: #B0C4DE;}
+
+.outline{border-radius:8;border-right-style: solid;border-top-style: solid;border-bottom-style: solid;border-color:rgb(136, 136, 167);padding: 10px;}
+
+.mat-card{width:65%;align-content: center;background-color: white;margin: 5%;}
+
+.my-custom-class{background-color: rgb(196, 211, 224);font-size:23px;width:30%;}     
+
+#btn{ color:#B0C4DE;background-color: navy;border:1px solid whitesmoke;width:20%;}
+
+#btn1{ color:#B0C4DE;background-color:navy;border-top-left-radius: 20px;border:1px solid whitesmoke;width:25%;}
+
+#btn2{background-color: rgb(233, 229, 236);border-top-left-radius: 20px;border:1px solid whitesmoke;width:20%;}
+
+.left{float:left;width:30%;display: inline;}
+
+.right{float:right;width:30%;display: inline;height: 40%;}
+
+fieldset{border-color: navy;color:navy;font-weight:600;font-style: italic;}
+
+#prev{float: right;margin-top: 50%;margin-bottom: 1%;}

@@ -1,0 +1,29 @@
+.my-custom-class{background-color: antiquewhite;font-size:30px;width:50%;} 
+
+.example-card{padding:3%;background-color :white;margin: 6%;}
+
+.mat-form-field{width:260px;}
+
+.outline{border-radius:8;border-style: solid;border-width: 1px;border-color: navy;padding: 10px;}
+
+.mat-card{width:40%;align-content: center;}
+
+span{padding-right: 30px;}
+
+.card-wrapper{display: flex;justify-content: center;align-items: center;}
+
+#outline1{width:35%;align-content: center;fill: #d3e3f8;}
+
+.btn{width:1%;}
+
+#button{
+    background-color: white;border:1px solid rgb(187, 160, 160);
+    margin-left: 9px;color:blue;padding: 0%;
+  } 
+
+div{background-color: #a0bce0;}
+ 
+#next{margin-top: 38%;margin-bottom: 1%;} 
+
+ 
+ 

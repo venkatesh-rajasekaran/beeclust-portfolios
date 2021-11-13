@@ -1,0 +1,29 @@
+td:nth-child(even)
+{
+    background-color: lightgrey;
+}
+.mat-table
+{
+    
+    margin:auto 0; 
+    border: 2px solid grey;
+    background-color: white;
+   
+}
+td,tr
+{
+    padding:6px 20px;
+}
+.mat-form-field-underline
+{
+   background-color: black !important;
+
+} 
+#submitbtn
+{
+   margin-left: 40%;
+}
+.mat-select
+{
+    width:145px;
+}

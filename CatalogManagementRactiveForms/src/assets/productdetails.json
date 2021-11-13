@@ -1,0 +1,22 @@
+[
+{
+
+   "productid": 11,
+   "unit":"item"
+},
+ {
+
+    "productid": 12,
+     "unit":"kilogram"
+  },
+  {
+
+    "productid": 13,
+     "unit":"piece"
+  },
+  {
+
+    "productid": 14,
+     "unit":"set"
+  }
+]

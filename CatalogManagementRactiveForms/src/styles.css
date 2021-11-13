@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"; 
+
+html, body 
+{ 
+    height: 100%;
+    background:linear-gradient(to top,lightgray,rgba(255,255,255,1));
+}
+body 
+{ 
+    
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+.navbar 
+{
+    justify-content: space-between;
+}
+
+span {
+    padding-right: 20px;
+}
+
+.mat-toolbar {    
+    background-color:black !important;
+    color: white;
+    font-size: 20px;
+    height: 50px;
+}
+
+.mat-flat-button{
+    background:rgb(255,255,255,0.2);
+    backdrop-filter: blur(3px);
+    color: white ;
+    font-size: 15px;
+    text-align: center;
+}
+
+.mat-menu-item
+{
+    padding:10px;
+    font-size:15px;
+    text-align: center;
+}
+.mat-menu-item:hover
+{
+     background-color: black !important;
+     color:white;
+}
+.mat-menu a
+{
+    text-decoration: none;
+}
+
+.mat-button:hover
+{
+   background:rgb(12, 9, 9) !important;
+   color:white;
+   margin-left: 10px;
+   text-decoration: none;
+}
+#container
+{
+    width: 475px;
+    height:265px;
+    margin:0 auto;
+    margin-top:70px;
+    padding:10px 10px;
+    font-weight: 400;   
+    background-color:lightgray;
+}
+.mat-icon
+{
+    font-size:16px;
+}
+p
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: black;
+    font-size:20px;
+}
+::-webkit-scrollbar
+{
+    width:12px;
+    background:white;
+}
+::-webkit-scrollbar-thumb
+{
+    border-radius: 20px;
+    background: darkgray;
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background:-webkit-linear-gradient(black,lightgray);
+}

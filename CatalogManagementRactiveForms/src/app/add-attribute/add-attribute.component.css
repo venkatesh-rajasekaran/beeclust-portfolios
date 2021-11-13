@@ -1,0 +1,37 @@
+#additionalAttr
+{
+    width: 529px;
+    height:323px;    
+    margin:0 auto;
+    margin-top:50px;
+    padding:10px 10px;
+    font-weight: 400;   
+    background-color:lightgrey;
+}
+tr:nth-child(even)
+{
+    background-color: lightgray;
+}
+tr:nth-child(7)
+{
+    padding-bottom:20px;
+}
+tr
+{
+    border: 1px solid darkgray;
+}
+td
+{
+    /* width:220px; */
+    padding:3px 3px;
+}
+
+mat-label
+{
+    padding: 5px 15px;
+}
+mat-icon
+{
+    padding: 2px;
+    margin: 2px;
+}

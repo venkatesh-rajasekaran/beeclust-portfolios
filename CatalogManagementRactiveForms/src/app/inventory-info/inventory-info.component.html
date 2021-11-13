@@ -1,0 +1,102 @@
+
+<br>
+<p>Product Item’s Inventory Information</p>
+<div id="inventoryInfo">
+    <table class="mat-table">
+        <tr class="mat-row">
+            <td class="mat-cell">Time sensitive</td>
+            <td class="mat-cell">
+                <mat-checkbox></mat-checkbox>
+            </td>
+            <td class="mat-cell">Default Expiration Days</td>
+            <td class="mat-cell">
+                <mat-form-field>
+                    <input  matInput placeholder="0">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr class="mat-row">
+            <td class="mat-cell">ATP rule</td>
+            <td class="mat-cell">
+                <mat-select placeholder="Select an option">
+                    <mat-option [value]=atpRule *ngFor="let atpRule of inventoryDetail.ATPrule">{{atpRule}}</mat-option>
+                </mat-select>
+            </td>
+            <td class="mat-cell">ATP Monitor rule</td>
+            <td class="mat-cell">
+                <mat-select placeholder="Select an option">
+                    <mat-option [value]=atpMonitorrule *ngFor="let atpMonitorrule of inventoryDetail.ATPmonitorRule">{{atpMonitorrule}}</mat-option>
+
+                </mat-select>
+            </td>
+        </tr>
+
+        <tr class="mat-row">
+            <td class="mat-cell">Node level ATP Monitor rule</td>
+            <td class="mat-cell">
+                <mat-select placeholder="Select an option">
+                    <mat-option value="option1">option1</mat-option>
+                    <mat-option value="option2">option2</mat-option>
+                </mat-select>
+            </td>
+            <td class="mat-cell">Default Product Class</td>
+            <td class="mat-cell">
+                <mat-select placeholder="Select an option">
+                    <mat-option value="option1">option1</mat-option>
+                    <mat-option value="option2">option2</mat-option>
+                </mat-select>
+            </td>
+        </tr>
+        <tr class="mat-row">
+            <td class="mat-cell">Track FIFO inventory</td>
+            <td class="mat-cell">
+                <mat-select placeholder="Select an option">
+                    <mat-option value="option1">option1</mat-option>
+                    <mat-option value="option2">option2</mat-option>
+                </mat-select>
+            </td>
+            <td class="mat-cell">Default Expiration Days</td>
+            <td class="mat-cell">
+                <mat-form-field>
+                    <input id="inp" matInput placeholder="">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr class="mat-row">
+            <td cass="mat-cell" colspan="2">
+                <mat-radio-button value="val">Onhand Safty Factor Percentage</mat-radio-button>
+            </td>
+            <td class="mat-cell" colspan="2">
+                <mat-radio-button value="val">Onhand Safty Factor Quantity</mat-radio-button>
+            </td>
+        </tr>
+        <tr class="mat-row">
+            <td cass="mat-cell" colspan="2">
+                <mat-checkbox>Serial Tracked</mat-checkbox>
+            </td>
+            <td class="mat-cell" colspan="2">
+                <mat-checkbox>Serialized</mat-checkbox>
+            </td>
+        </tr>
+        <tr class="mat-row">
+            <td cass="mat-cell" colspan="2">
+                Tag controlled
+            </td>
+        </tr>
+        <tr class="mat-row" colspan="4">
+            <td cass="mat-cell">
+                <mat-checkbox>Not Tag Controlled</mat-checkbox>
+
+            </td>
+            <td cass="mat-cell">
+                <mat-checkbox>Sometimes Tag Controlled</mat-checkbox>
+
+            </td>
+            <td cass="mat-cell">
+                <mat-checkbox>Always Tag Controlled</mat-checkbox>
+
+            </td>
+        </tr>
+</table>
+</div>
+<br><br>

@@ -1,0 +1,9 @@
+[
+  {"uom":"Case","master":"Data","atp":"Sales Orders"},
+  {"uom":"Pack","master":"Volume","atp":"Internal Orders"},
+  {"uom":"Dozen","master":"Unit","atp":"User Defined"},
+  {"uom":"Meter","master":"Disk","atp":"Supplier Requests"}
+]
+
+ 
+

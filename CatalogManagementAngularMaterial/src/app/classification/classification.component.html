@@ -1,0 +1,99 @@
+<div>
+  <mat-card class="example-card" style="border: white;border-style: solid;">
+    <button mat-stroked-button id="btn">
+      <mat-icon>mood</mat-icon>Other Attributes
+    </button><button mat-stroked-button id="btn">
+      <mat-icon>folder</mat-icon>Association
+    </button><button mat-stroked-button id="btn">
+      <mat-icon>cloud_download</mat-icon>Node Item
+    </button><button mat-stroked-button id="btn">
+      <mat-icon>create_new_folder</mat-icon>Available services
+    </button><button mat-stroked-button id="btn">
+      <mat-icon>share</mat-icon>Item Instructions
+    </button><br>
+    <button mat-stroked-button id="btn">
+      <mat-icon>people</mat-icon>Primary Info
+    </button><button mat-stroked-button id="btn1">
+      <mat-icon>pages</mat-icon>Units Of Measures
+    </button><button mat-stroked-button id="btn1">
+      <mat-icon>add</mat-icon>Sourcing/transportation
+    </button><button mat-stroked-button id="btn2">
+      <mat-icon>ballot</mat-icon>Inventory Info
+    </button><button mat-stroked-button id="btn1">
+      <mat-icon>drafts</mat-icon>Classifications
+    </button><br>
+
+    <mat-card-content class="outline"><br><br>
+      <mat-checkbox><span style="color: navy;font-weight: 500;">Time Sensitive</span></mat-checkbox><span
+        style="padding-left: 22%;"></span><span style="padding-left: 18%;color: navy;font-weight: 500;">Default
+        Expiration Days</span>&nbsp;&nbsp;<input class="my-custom-class" matInput> <br><br> <br>
+
+      <span style="color: navy;font-weight: 500;"> ATP Rule </span><span style="padding-left: 12%;"></span>
+      <mat-form-field appearance="outline">
+        <mat-select>
+          <mat-option *ngFor="let atp_rule of catalogs" [value]="atp_rule.atp">
+            {{atp_rule.atp}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> <button mat-stroked-button style="margin-left: 10px;padding-top: 1%;">
+        <mat-icon>mood</mat-icon>
+      </button>
+
+      <span style="padding-left: 12%;"></span><span style="color:navy;font-weight:500;">ATP Monitor Rule</span>&nbsp;
+      <mat-form-field appearance="outline">
+        <mat-select>
+          <mat-option *ngFor="let monitor_rule of catalogs" [value]="monitor_rule.atp">
+            {{monitor_rule.atp}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> <button mat-stroked-button style="margin-left:10px;padding-top: 1%;">
+        <mat-icon>mood</mat-icon>
+      </button><br><br>
+
+      <span style="color: navy;font-weight: 500;"> Node level ATP monitor Rule </span>
+      <mat-form-field appearance="outline">
+        <mat-select>
+          <mat-option *ngFor="let atp_monitor of catalogs" [value]="atp_monitor.atp">
+            {{atp_monitor.atp}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field><button mat-stroked-button style="margin-left:10px;padding-top: 1%;">
+        <mat-icon>mood</mat-icon>
+      </button>
+
+      <span style="padding-left: 12%;"></span><span style="color: navy;font-weight: 500;">Default Products</span>&nbsp;
+      <mat-form-field appearance="outline">
+        <mat-select>
+          <mat-option *ngFor="let default_products of catalogs" [value]="default_products.uom">
+            {{default_products.uom}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> <button mat-stroked-button style="margin-left:10px;padding-top: 1%;">
+        <mat-icon>mood</mat-icon>
+      </button>
+
+      <mat-radio-button><span style="color: navy;font-weight: 500;">onhand safety factor percentage</span>
+      </mat-radio-button><span style="padding-left: 35%;"></span>
+      <mat-radio-button><span style="color: navy;font-weight: 500;">factor quantity</span></mat-radio-button><br><br>
+      <mat-checkbox><span style="color: navy;font-weight: 500;">Serial tracket</span></mat-checkbox><span
+        style="padding-left: 22%;"></span><span style="padding-left: 26%;"></span>
+      <mat-checkbox><span style="color: navy;font-weight: 500;">serialized</span></mat-checkbox><br><br>
+
+    </mat-card-content>
+
+    <fieldset style="border-color: #3f6eac;">
+      <legend style="color:#3f6eac;"><b>Tag Controlled</b></legend>
+      <mat-radio-button><span style="color: navy;font-weight: 500;">Not Tag Controlled</span></mat-radio-button><span
+        style="padding-left: 22%;"></span>
+      <mat-radio-button><span style="color: navy;font-weight: 500;">Sometimes Tag Controlled</span></mat-radio-button>
+      <span style="padding-left: 22%;"></span>
+      <mat-radio-button><span style="color: navy;font-weight: 500;">Always Tag Controlled</span></mat-radio-button>
+    </fieldset><br>
+
+  </mat-card>
+  <!--<button mat-button (click)='action()' id="prev"
+    style="background-color: navy;color: whitesmoke;border-radius: 2px;">Prev</button><span
+    style="padding: 1%;"></span>
+  <button mat-button (click)='action1()' id="next"
+    style="background-color: navy;color: whitesmoke;border-radius: 2px;">Next</button>-->
+</div>

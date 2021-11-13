@@ -1,0 +1,14 @@
+{
+  
+    "ATPrule":
+    [
+        "Default",
+        "Create New"
+    ],
+    "ATPmonitorRule":
+    [
+        "Default",
+        "Rich Catalog rule"
+    ]
+
+}

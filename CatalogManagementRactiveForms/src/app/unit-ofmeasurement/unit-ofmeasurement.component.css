@@ -1,0 +1,32 @@
+#unitInfo
+{
+    width:790px;
+    padding:5px 5px;
+    height:409px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: gray;
+}
+table
+{
+    width:780px;
+}
+tr,td
+{
+    border: 1px solid grey;
+    padding: 3px 3px;
+    font-size:12px;
+}
+
+td:nth-child(odd)
+{
+    background-color: lightgray;
+}
+tr:nth-child(4)
+{
+    color:black;
+    font-weight: bold;
+    text-align: center;
+    background-color:darkgray;
+}
+

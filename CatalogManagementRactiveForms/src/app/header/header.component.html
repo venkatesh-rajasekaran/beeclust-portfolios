@@ -1,0 +1,19 @@
+  <div>
+  <mat-toolbar class="navbar">
+    <p id="companyname"><span><img src="/assets/images/catalog-icon.jpg" width="40px" height="40px"></span>Catalogue</p>
+    <div class="matmenu">
+      <button mat-flat-button [matMenuTriggerFor]="menu">Go to..</button>
+  </div>
+  </mat-toolbar>
+  
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="tablemenu">Product</button>
+  </mat-menu>
+
+  <mat-menu #tablemenu="matMenu">
+    <a mat-button routerLink="add-items">Add items</a><br>
+    <a mat-button routerLink="unit-of-measures">Unit of measures</a><br>
+    <a mat-button routerLink="associations">Associations</a><br>
+    <a mat-button routerLink="inventory">Inventory</a><br>
+    <a mat-button routerLink="add-attributes">Add Attributes</a>
+  </mat-menu>

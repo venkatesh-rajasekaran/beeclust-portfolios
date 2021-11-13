@@ -1,0 +1,19 @@
+div{display: flex;justify-content: center;align-items: center;background-color: #B0C4DE;}
+
+.outline{border-radius:8;border-right-style: solid;border-top-style: solid;border-bottom-style: solid;border-color:#3f6eac;padding: 10px;}
+
+.mat-card{width:auto;align-content: center;}
+
+.my-custom-class{background-color: rgb(196, 194, 199);font-size:30px;width:30%;}  
+
+#btn{color:aliceblue;background-color: #3f6eac;border:1px solid whitesmoke;width:20%;}
+
+#btn1{background-color: #596677;border-top-left-radius: 20px;border:1px solid whitesmoke;width:20%;}
+
+#btn2{background-color: rgb(233, 229, 236);border-top-left-radius: 20px;border:1px solid #B0C4DE;width:20%;}
+
+.example-card{padding:0%;background-color :whitesmoke;width:75%;margin: 2%;}
+  
+#next{float: right;margin-top: 50%;margin-bottom: 1%;}
+
+#prev{float: right;margin-top: 50%;margin-bottom: 1%;} 

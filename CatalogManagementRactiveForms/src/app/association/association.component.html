@@ -1,0 +1,72 @@
+<br>
+<p> Association by Item</p>
+<div id="container1">
+    <table class="mat-table table-success">
+        <th class="mat-header-cell" colspan="2">
+            Associated Item
+        </th>
+        <tr class="mat-row">
+            <td class="mat-cell">Item id</td>
+            <td class="mat-cell">
+                <mat-select placeholder="Select an option">
+                    <mat-option [value]=product *ngFor="let product of productdet">{{product.productid}}</mat-option>
+                </mat-select>
+                <mat-icon>create_new_folder</mat-icon>
+            </td>
+        </tr>
+
+        <tr class="mat-row">
+            <td class="mat-cell">UOM</td>
+            <td class="mat-cell">
+                <mat-select placeholder="Select an option">
+                    <mat-option [value]=product *ngFor="let product of productdet">{{product.unit}}</mat-option>
+                </mat-select>
+            </td>
+        </tr>
+
+        <tr class="mat-row">
+            <td class="mat-cell">Effective Date From</td>
+            <td class="mat-cell">
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </td>
+        </tr>
+
+        <tr class="mat-row">
+            <td class="mat-cell">Effective Date To</td>
+            <td class="mat-cell">
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker1" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field>
+            </td>
+        </tr>
+
+        <tr class="mat-row">
+            <td class="mat-cell">Quantity</td>
+            <td class="mat-cell">
+                <mat-form-field>
+                    <input matInput placeholder="Enter quantity">
+                </mat-form-field>
+            </td>
+        </tr>
+
+        <tr class="mat-row">
+            <td class="mat-cell">Priority</td>
+            <td class="mat-cell">
+                <mat-form-field>
+                    <input matInput placeholder="Enter weight">
+                </mat-form-field>
+            </td>
+        </tr>
+    </table>
+</div>
+<br><br><br><br>
+
+
+
+

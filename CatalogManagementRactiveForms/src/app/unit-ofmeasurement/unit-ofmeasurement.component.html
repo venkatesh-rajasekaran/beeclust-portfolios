@@ -1,0 +1,113 @@
+<br>
+<p>Add alternate Unit of Measure to Product
+    Item </p>
+<div id="unitInfo">
+    <table class="mat-table table-success">
+
+        <tr class="mat-row">
+            <td class="mat-cell">Alternate UOM</td>
+            <td class="mat-cell">
+                <mat-select placeholder="Select an option">
+                    <mat-option [value]=alternateunit.unit *ngFor="let alternateunit of alternateUnits">
+                        {{alternateunit.unit}}</mat-option>
+                </mat-select>
+            </td>
+            <td class="mat-cell">Coversion Quantity to Inventory UOM</td>
+            <td class="mat-cell">
+                <mat-form-field>
+                    <input matInput placeholder="Enter userid">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr class="mat-row">
+            <td class="mat-cell">Positive Package Tolerance Qty</td>
+            <td class="mat-cell">
+                <mat-form-field>
+                    <input matInput placeholder="Enter userid">
+                </mat-form-field>
+            </td>
+            <td class="mat-cell">Negative Package Tolerance Qty</td>
+            <td class="mat-cell">
+                <mat-form-field>
+                    <input matInput placeholder="Enter userid">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr class="mat-row">
+            <td class="mat-cell" colspan="4">
+
+                <mat-checkbox>Used as container for packing</mat-checkbox>
+            </td>
+        </tr>
+        <tr class="mat-row">
+            <td class="mat-cell" colspan="4">Unit Dimensions</td>
+        </tr>
+        <tr class="mat-row">
+            <td class="mat-cell">Weight</td>
+            <td class="mat-cell">
+                <mat-form-field>
+                    <input matInput placeholder="Enter weight">
+                </mat-form-field>
+            </td>
+            <td class="mat-cell">Weight UOM</td>
+            <td class="mat-cell">
+                <mat-select placeholder="Select an option">
+                    <mat-option value="option1">option1</mat-option>
+                    <mat-option value="option2">option2</mat-option>
+                </mat-select>
+            </td>
+
+        </tr>
+
+        <tr class="mat-row">
+            <td class="mat-cell">Length</td>
+            <td class="mat-cell">
+                <mat-form-field>
+                    <input matInput placeholder="Enter length">
+                </mat-form-field>
+            </td>
+            <td class="mat-cell">Length UOM</td>
+            <td class="mat-cell">
+                <mat-select placeholder="Select an option">
+                    <mat-option value="option1">option1</mat-option>
+                    <mat-option value="option2">option2</mat-option>
+                </mat-select>
+            </td>
+        </tr>
+
+        <tr class="mat-row">
+            <td class="mat-cell">Width</td>
+            <td class="mat-cell">
+                <mat-form-field>
+                    <input matInput placeholder="Enter width">
+                </mat-form-field>
+            </td>
+            <td class="mat-cell">Width UOM</td>
+            <td class="mat-cell">
+                <mat-select placeholder="Select an option">
+                    <mat-option value="option1">option1</mat-option>
+                    <mat-option value="option2">option2</mat-option>
+                </mat-select>
+            </td>
+
+        </tr>
+        <tr class="mat-row">
+            <td class="mat-cell">Height</td>
+            <td class="mat-cell">
+                <mat-form-field>
+                    <input matInput placeholder="Enter height">
+                </mat-form-field>
+            </td>
+            <td class="mat-cell">Height UOM</td>
+            <td class="mat-cell">
+                <mat-select placeholder="Select an option">
+                    <mat-option value="option1">option1</mat-option>
+                    <mat-option value="option2">option2</mat-option>
+                </mat-select>
+            </td>
+
+        </tr>
+    </table>
+</div>
+
+<br><br>
