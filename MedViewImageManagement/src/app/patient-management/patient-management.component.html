@@ -1,5 +1,8 @@
 <mat-sidenav-container>
   <mat-sidenav opened mode="side" class="sidenavcontent">
+    <mat-toolbar>
+      Endoscopy Image
+    </mat-toolbar>
     <table mat-table [dataSource]="dataSource" matSort>
       <ng-container *ngFor="let col of demographyColumns" matColumnDef="{{col}}">
         <th mat-header-cell *matHeaderCellDef mat-sort-header style="color: white;font-size: 15px;"> {{col}} </th>
@@ -8,13 +11,9 @@
       <tr mat-header-row *matHeaderRowDef="demographyColumns"></tr>
       <tr mat-row (click)="onSelect(row)" *matRowDef="let row; columns: demographyColumns;"></tr>      
     </table>
-    <mat-paginator hidePageSize [pageSizeOptions]="[10, 15]" style="color: teal;"></mat-paginator>
+    <mat-paginator hidePageSize [pageSizeOptions]="[10, 5]" style=" background-color:#333333;color: white;"></mat-paginator>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar>
-      Endoscopy Image
-    </mat-toolbar>
-
     <div class="content1">
       <table>
         <tr>
@@ -43,10 +42,10 @@
 
         <table><br>
           <tr>
-            <td><button (click)="prevImage()" style="background-color:#333333;"><img
+            <td><button [disabled]="disablePrevMainWndBtn" (click)="prevImage()" style="background-color:#333333;"><img
                   src="assets/images/2305 - Triangle Arrow Left.png" height="30px" width="30px"></button></td>
 
-            <td><button (click)="nextImage()" style="background-color:#333333;"><img
+            <td><button [disabled]="disableNextMainWndBtn" (click)="nextImage()" style="background-color:#333333;"><img
                   src="assets/images/2306 - Triangle Arrow Right.png" height="30px" width="30px"></button></td>
           </tr>
         </table>
@@ -59,10 +58,10 @@
 
         <div id="iconbar">
           <div id="icons">
-            <button [disabled]="isDisabledprevBtn" (click)="goToprev()"><img src="/assets/images/Previous.png"
+            <button [disabled]="disablePrevMainWndBtn" (click)="goToprev()"><img src="/assets/images/Previous.png"
                 height="25px" width="25px" alt="previous"></button>
             <button (click)="playPause()"><img [src]="playpause" alt="play" width="16px"></button>
-            <button [disabled]="isDisablednextBtn"><img src="/assets/images/Next.png" height="25px" width="25px"
+            <button [disabled]="disableNextMainWndBtn"><img src="/assets/images/Next.png" height="25px" width="25px"
                 alt="next" (click)="goTonext()"></button>
           </div>
         </div><br><br>
@@ -96,431 +95,56 @@
         <td *ngIf="selectedPatientImages[i+5]!=undefined"><img class="thumbnail" src={{selectedPatientImages[i+5]}}
             (click)="onThumbnailSelect(i+5)"></td>
       </tr>
-
       <tr>
-        <td><button  *ngIf="selectedPatientImages[i+5]" [disabled]="!selectedPatientImages[i-6]" (click)="backward()"
+        <td><button [disabled]="disablePrevImageThumbnailBtn" (click)="backward()"
             style="background-color:#3f3e3e;float: left; "><img src="assets/images/2305 - Triangle Arrow Left.png"
               height="25px" width="25px"></button></td>
 
-        <td><button *ngIf="selectedPatientImages[i+5]" [disabled]="!selectedPatientImages[i+6]" (click)="forward()"
+        <td><button [disabled]="disableNextImageThumbnailBtn" (click)="forward()"
             style="background-color:#3f3e3e;float:right;"><img src="assets/images/2306 - Triangle Arrow Right.png"
               height="25px" width="25px "></button></td>
       </tr>
     </table>
-    <!--Thumbnail video-->
+
     <mat-toolbar>
       Video Clips
     </mat-toolbar>
-
+    <!--Video Thumbnail Image-->
     <table class="relvideos">
-      <tbody *ngIf="selectedPatientId==1 && isClicked==false">
         <tr>
-          <td>
+          <td *ngIf="selectedPatientVideos[k]!=undefined">
             <video [src]="selectedPatientVideos[k]" (click)="playInbig(k)" width="100px" height="80px"></video>
           </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+1]" (click)="playInbig(k+1)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+2]" (click)="playInbig(k+2)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+3]" (click)="playInbig(k+3)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+4]" (click)="playInbig(k+4)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+5]" (click)="playInbig(k+5)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-
-      </tbody>
-      <tbody *ngIf="selectedPatientId==1  && isClicked==true">
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+6]" (click)="playInbig(k+6)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+7]" (click)="playInbig(k+7)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+8]" (click)="playInbig(k+8)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+9]" (click)="playInbig(k+9)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+10]" (click)="playInbig(k+10)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+11]" (click)="playInbig(k+11)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-      </tbody>
-      <tbody *ngIf="selectedPatientId==1">
-        <tr>
-          <td>
-            <button [disabled]='isDisabledprev' class="prev" (click)="previous()"><img src="assets/images/leftarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-          <td>
-            <button [disabled]='isDisablednext' class="next" (click)="next()"><img src="assets/images/rightarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-        </tr>
-      </tbody>
-      <tbody *ngIf="selectedPatientId==2  && isClicked==false">
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[i]" (click)="playInbig(k)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[i+1]" (click)="playInbig(k+1)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+2]" (click)="playInbig(k+2)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+3]" (click)="playInbig(k+3)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+4]" (click)="playInbig(k+4)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+5]" (click)="playInbig(k+5)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-      </tbody>
-
-      <tbody *ngIf="selectedPatientId==2">
-        <tr>
-          <td>
-            <button [disabled]='isDisabledprev' class="prev" (click)="previous()"><img src="assets/images/leftarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-          <td>
-            <button [disabled]='isDisablednext' class="next" (click)="next()"><img src="assets/images/rightarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-        </tr>
-      </tbody>
-      <tbody *ngIf="selectedPatientId==3 && isClicked==false">
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k]" (click)="playInbig(k)" width="100px" height="80px"></video>
-          </td>
-          <td>
+          <td *ngIf="selectedPatientVideos[k+1]!=undefined">
             <video [src]="selectedPatientVideos[k+1]" (click)="playInbig(k+1)" width="100px" height="80px"></video>
           </td>
         </tr>
         <tr>
-          <td>
+          <td *ngIf="selectedPatientVideos[k+2]!=undefined">
             <video [src]="selectedPatientVideos[k+2]" (click)="playInbig(k+2)" width="100px" height="80px"></video>
           </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+3]" (click)="playInbig(k+3)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-      </tbody>
-      <tbody *ngIf="selectedPatientId==3">
-        <tr>
-          <td>
-            <button [disabled]='isDisabledprev' class="prev" (click)="previous()"><img src="assets/images/leftarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-          <td>
-            <button [disabled]='isDisablednext' class="next" (click)="next()"><img src="assets/images/rightarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-        </tr>
-      </tbody>
-
-      <tbody *ngIf="selectedPatientId==4 && isClicked==false">
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k]" (click)="playInbig(k)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+1]" (click)="playInbig(k+1)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+2]" (click)="playInbig(k+2)" width="100px" height="80px"></video>
-          </td>
-          <td>
+          <td *ngIf="selectedPatientVideos[k+3]!=undefined">
             <video [src]="selectedPatientVideos[k+3]" (click)="playInbig(k+3)" width="100px" height="80px"></video>
           </td>
         </tr>
         <tr>
-          <td>
+          <td *ngIf="selectedPatientVideos[k+4]!=undefined">
             <video [src]="selectedPatientVideos[k+4]" (click)="playInbig(k+4)" width="100px" height="80px"></video>
           </td>
-          <td>
+          <td *ngIf="selectedPatientVideos[k+5]!=undefined">
             <video [src]="selectedPatientVideos[k+5]" (click)="playInbig(k+5)" width="100px" height="80px"></video>
           </td>
         </tr>
-      </tbody>
-      <tbody *ngIf="selectedPatientId==4">
         <tr>
           <td>
-            <button [disabled]='isDisabledprev' class="prev" (click)="previous()"><img src="assets/images/leftarrow.png"
+            <button [disabled]="disablePrevVideoThumbnailBtn" class="prev" (click)="previous()"><img src="assets/images/leftarrow.png"
                 height="25px" width="25px"></button>
           </td>
           <td>
-            <button [disabled]='isDisablednext' class="next" (click)="next()"><img src="assets/images/rightarrow.png"
+            <button [disabled]="disableNextVideoThumbnailBtn" class="next" (click)="next()"><img src="assets/images/rightarrow.png"
                 height="25px" width="25px"></button>
           </td>
-        </tr>
-      </tbody>
-      <tbody *ngIf="selectedPatientId==5 && isClicked==false">
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k]" (click)="playInbig(k)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+1]" (click)="playInbig(i+1)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+2]" (click)="playInbig(k+2)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+3]" (click)="playInbig(k+3)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+4]" (click)="playInbig(k+4)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+5]" (click)="playInbig(k+5)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-      </tbody>
-      <tbody *ngIf="selectedPatientId==5">
-        <tr>
-          <td>
-            <button [disabled]='isDisabledprev' class="prev" (click)="previous()"><img src="assets/images/leftarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-          <td>
-            <button [disabled]='isDisablednext' class="next" (click)="next()"><img src="assets/images/rightarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-        </tr>
-      </tbody>
-      <tbody *ngIf="selectedPatientId==6 && isClicked==false">
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k]" (click)="playInbig(k)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+1]" (click)="playInbig(k+1)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+2]" (click)="playInbig(k+2)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+3]" (click)="playInbig(k+3)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+4]" (click)="playInbig(k+4)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+5]" (click)="playInbig(k+5)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-      </tbody>
-      <tbody *ngIf="selectedPatientId==6">
-        <tr>
-          <td>
-            <button [disabled]='isDisabledprev' class="prev" (click)="previous()"><img src="assets/images/leftarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-          <td>
-            <button [disabled]='isDisablednext' class="next" (click)="next()"><img src="assets/images/rightarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-        </tr>
-      </tbody>
-      <tbody *ngIf="selectedPatientId==7 && isClicked==false">
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k]" (click)="playInbig(k)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+1]" (click)="playInbig(k+1)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+2]" (click)="playInbig(k+2)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+3]" (click)="playInbig(k+3)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+4]" (click)="playInbig(k+4)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+5]" (click)="playInbig(k+5)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-      </tbody>
-
-      <tbody *ngIf="selectedPatientId==7">
-        <tr>
-          <td>
-            <button [disabled]='isDisabledprev' class="prev" (click)="previous()"><img src="assets/images/leftarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-          <td>
-            <button [disabled]='isDisablednext' class="next" (click)="next()"><img src="assets/images/rightarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-        </tr>
-      </tbody>
-      <tbody *ngIf="selectedPatientId==8 && isClicked==false">
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k]" (click)="playInbig(k)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+1]" (click)="playInbig(k+1)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+2]" (click)="playInbig(k+2)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+3]" (click)="playInbig(k+3)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+4]" (click)="playInbig(k+4)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+5]" (click)="playInbig(k+5)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-      </tbody>
-
-      <tbody *ngIf="selectedPatientId==8">
-        <tr>
-          <td>
-            <button [disabled]='isDisabledprev' class="prev" (click)="previous()"><img src="assets/images/leftarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-          <td>
-            <button [disabled]='isDisablednext' class="next" (click)="next()"><img src="assets/images/rightarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-        </tr>
-      </tbody>
-      <tbody *ngIf="selectedPatientId==9 && isClicked==false">
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k]" (click)="playInbig(k)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+1]" (click)="playInbig(k+1)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+2]" (click)="playInbig(k+2)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+3]" (click)="playInbig(k+3)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+4]" (click)="playInbig(k+4)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+5]" (click)="playInbig(k+5)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-      </tbody>
-
-
-      <tbody *ngIf="selectedPatientId==9">
-        <tr>
-          <td>
-            <button [disabled]='isDisabledprev' class="prev" (click)="previous()"><img src="assets/images/leftarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-          <td>
-            <button [disabled]='isDisablednext' class="next" (click)="next()"><img src="assets/images/rightarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-        </tr>
-      </tbody>
-      <tbody *ngIf="selectedPatientId==10 && isClicked==false">
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k]" (click)="playInbig(k)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+1]" (click)="playInbig(k+1)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+2]" (click)="playInbig(k+2)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+3]" (click)="playInbig(k+3)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <video [src]="selectedPatientVideos[k+4]" (click)="playInbig(k+4)" width="100px" height="80px"></video>
-          </td>
-          <td>
-            <video [src]="selectedPatientVideos[k+5]" (click)="playInbig(k+5)" width="100px" height="80px"></video>
-          </td>
-        </tr>
-      </tbody>
-      <tbody *ngIf="selectedPatientId==10">
-        <tr>
-          <td>
-            <button [disabled]='isDisabledprev' class="prev" (click)="previous()"><img src="assets/images/leftarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-          <td>
-            <button [disabled]='isDisablednext' class="next" (click)="next()"><img src="assets/images/rightarrow.png"
-                height="25px" width="25px"></button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-
+        </tr>  
+    </table> 
   </mat-sidenav>
 </mat-sidenav-container>
