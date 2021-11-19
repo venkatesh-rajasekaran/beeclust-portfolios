@@ -16,6 +16,11 @@ import { Catalog_configurationComponent } from './catalog_configuration/catalog_
 import { Home_pageComponent } from './home_page/home_page.component';
 import { CatalogService } from './catalog.service';
 import { FooterComponent } from './footer/footer.component';
+import { SupplyReportComponent } from './bi-reports/supply-report/supply-report.component';
+import { ProductesReportComponent } from './bi-reports/products-report/productes-report.component';
+import { HoldReportComponent } from './bi-reports/hold-order-report/hold-report.component';
+import { HoldDetailsReportComponent } from './bi-reports/hold-details-report/hold-details-report.component';
+import { OpenOrderReportComponent } from './bi-reports/open-order-report/open-order-report.component';
  
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import { FooterComponent } from './footer/footer.component';
     ClassificationComponent,
     Catalog_configurationComponent,
     Home_pageComponent,
-    FooterComponent
+    FooterComponent,
+    SupplyReportComponent,
+    ProductesReportComponent,
+    HoldReportComponent,
+    HoldDetailsReportComponent,
+    OpenOrderReportComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,35 @@
+ <div><br><br><br>
+  <table>
+    <tr><td style="font-size: 18px;font-weight: 600;color: rgb(37, 141, 141);">Order No</td><td style="color: cornflowerblue;font-size: 18px;font-weight: 600;">Y10000000030</td><td style="font-size: 18px;font-weight: 600;color: rgb(37, 141, 141);">Ship To</td><td style="color: cornflowerblue;font-size: 18px;font-weight: 600;">BUYER</td><td style="color: cornflowerblue;font-size: 18px;font-weight: 600;">NH</td></tr>
+    <tr><td style="font-size: 18px;font-weight: 600;color: rgb(37, 141, 141);">Order Date</td><td style="color: cornflowerblue;font-size: 18px;font-weight: 600;">5/15/2021 11.09 AM</td><td style="font-size: 18px;font-weight: 600;color: rgb(37, 141, 141);">Bill To</td><td style="color: cornflowerblue;font-size: 18px;font-weight: 600;">BUYER</td><td style="color: cornflowerblue;font-size: 18px;font-weight: 600;">NH</td></tr>
+    <tr><td style="font-size: 18px;font-weight: 600;color: rgb(37, 141, 141);">Enterprise</td><td style="color: cornflowerblue;font-size: 18px;font-weight: 600;">Colony2Ent22</td></tr>
+    <tr><td style="font-size: 18px;font-weight: 600;color: rgb(37, 141, 141);">Status</td><td style="color: cornflowerblue;font-size: 18px;font-weight: 600;">Created</td><td style="font-size: 18px;font-weight: 600;color: rgb(37, 141, 141);">Currency</td><td style="color: cornflowerblue;font-size: 18px;font-weight: 600;">USD</td></tr>
+  </table><br><br><br>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+   
+        <ng-container matColumnDef="hold_type">
+          <th mat-header-cell *matHeaderCellDef> Hold Type </th>
+          <td mat-cell *matCellDef="let element"> {{element.hold_type}} </td>
+        </ng-container>
+    
+         <ng-container matColumnDef="orders">
+          <th mat-header-cell *matHeaderCellDef> # of Orders </th>
+          <td mat-cell *matCellDef="let element"> {{element.orders}} </td>
+        </ng-container>
+    
+         <ng-container matColumnDef="resolved_orders">
+          <th mat-header-cell *matHeaderCellDef> # of resolved Orders </th>
+          <td mat-cell *matCellDef="let element"> {{element.resolved_orders}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="unresolved_orders">
+          <th mat-header-cell *matHeaderCellDef> # of unresolved Orders </th>
+          <td mat-cell *matCellDef="let element"> {{element.unresolved_orders}} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+    
+      </table>
+ </div>

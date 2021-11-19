@@ -1,0 +1,14 @@
+div{margin: 1%;height:80%;}
+
+table{width:100%;}
+ 
+th{
+    color:black;
+    background-color:rgb(58, 176, 180);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+td{font-size: 15px;}
+
+tr{background-color: rgb(179, 201, 243);}

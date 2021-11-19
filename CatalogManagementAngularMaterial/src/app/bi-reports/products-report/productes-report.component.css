@@ -1,0 +1,26 @@
+table{
+    width: 100%;
+    justify-content: center;
+    
+}
+
+th{
+    color:black;
+    background-color: rgb(58, 176, 180);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+tr:nth-child(even){background-color: rgb(185, 228, 230);}
+
+div{height: 100%;margin: 1%;}
+
+td{
+    font-size: 15px;
+    font-weight: 500;
+    
+}
+
+span{text-decoration-color: cadetblue;text-decoration: underline;}
+
+h2{color: rgb(17, 86, 87);}
