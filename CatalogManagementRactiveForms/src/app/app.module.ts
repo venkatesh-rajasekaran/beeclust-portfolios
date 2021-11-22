@@ -15,6 +15,10 @@ import { UnitOfmeasurementComponent } from './unit-ofmeasurement/unit-ofmeasurem
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
+import { OrderDetailsComponent } from './Reports/order-details/order-details.component';
+import { OrdersOnholdComponent } from './Reports/orders-onhold/orders-onhold.component';
+import { ReturnedProductsComponent } from './Reports/returned-products/returned-products.component';
+import { TopProductsComponent } from './Reports/top-products/top-products.component';
 
 const routes:Routes=[
   {path:'',component :HomepageComponent},
@@ -23,8 +27,11 @@ const routes:Routes=[
   {path:'unit-of-measures',component :UnitOfmeasurementComponent},
   {path:'associations',component :AssociationComponent},
   {path:'inventory',component :InventoryInfoComponent},
-  {path:'add-attributes',component :AddAttributeComponent}
-  
+  {path:'add-attributes',component :AddAttributeComponent},
+  {path:'reports/order-details-report',component :OrderDetailsComponent},
+  {path:'reports/orders-on-hold-report',component:OrdersOnholdComponent},
+  {path:'reports/returned-products-report',component:ReturnedProductsComponent},
+  {path:'reports/top-products-report',component:TopProductsComponent},
 ];
 
 
@@ -38,7 +45,12 @@ const routes:Routes=[
     AssociationComponent,
     InventoryInfoComponent,
     UnitOfmeasurementComponent,
-    FooterComponent
+    FooterComponent,
+    OrderDetailsComponent,
+    OrdersOnholdComponent,
+    ReturnedProductsComponent,
+    TopProductsComponent
+    
 
   ],
   imports: [

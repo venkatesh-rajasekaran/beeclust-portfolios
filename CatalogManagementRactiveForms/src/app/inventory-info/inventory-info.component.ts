@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import inventoryDetails from 'src/assets/inventoryInfo.json';
+import inventoryDetails from 'src/assets//data/inventoryInfo.json';
 import { Inventoryinformation } from '../Interfaces/inventoryInformation';
 
 

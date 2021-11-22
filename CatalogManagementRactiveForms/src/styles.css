@@ -3,7 +3,7 @@
 
 html, body 
 { 
-    height: 100%;
+    height: auto;
     background:linear-gradient(to top,lightgray,rgba(255,255,255,1));
 }
 body 
