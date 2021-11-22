@@ -1,6 +1,15 @@
 
 <mat-card> <span id="span1"><b>Catalog Management</b></span>
-    <button mat-button [matMenuTriggerFor]="menu"><span style="color: navy;font-weight: 700;">Products</span></button>&nbsp;
+    <button mat-button [matMenuTriggerFor]="menu1"><span style="color: rgb(30, 63, 63);font-weight: 600;font-size: 18px;">Reporting</span></button>&nbsp;
+    <mat-menu   #menu1="matMenu" >&nbsp;
+    <button mat-button (click)='action6()' class="center"><h4>Supply Report</h4></button><br><br>   
+    <button mat-button (click)='action7()' class="center"><h4>Product Report</h4></button><br><br>
+    <button mat-button (click)='action8()' class="center"><h4>Hold Report</h4></button><br><br>
+    <button mat-button (click)='action9()' class="center"><h4>Hold Details Report</h4></button><br><br>
+    <button mat-button (click)='action10()'class="center"><h4>Open Order Report</h4></button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="menu"><span style="color: rgb(30, 63, 63);font-weight: 600;font-size: 18px;">Products</span></button>&nbsp;
     <mat-menu   #menu="matMenu" >&nbsp;
     <button mat-button (click)='action5()' class="center">Home</button><br><br>   
     <button mat-button (click)='action()' class="center">Product Item</button><br><br>
@@ -9,6 +18,7 @@
     <button mat-button (click)='action3()' class="center" >Classification</button><br><br>
     <button mat-button (click)='action4()' class="center" >Catalog Configuration</button><br><br>
     </mat-menu>
+   
 </mat-card>
 <router-outlet></router-outlet>
 

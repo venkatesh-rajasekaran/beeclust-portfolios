@@ -1,0 +1,42 @@
+<div><br><br>
+     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+   
+        <ng-container matColumnDef="key">
+          <th mat-header-cell *matHeaderCellDef> Enterprise Key </th>
+          <td mat-cell *matCellDef="let element"> {{element.key}} </td>
+        </ng-container>
+    
+         <ng-container matColumnDef="buyer">
+          <th mat-header-cell *matHeaderCellDef> Buyer Organization Code </th>
+          <td mat-cell *matCellDef="let element"> {{element.buyer}} </td>
+        </ng-container>
+    
+         <ng-container matColumnDef="ship_date">
+          <th mat-header-cell *matHeaderCellDef> Requested Ship Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.ship_date}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="order_no">
+          <th mat-header-cell *matHeaderCellDef> Order No </th>
+          <td mat-cell *matCellDef="let element"> {{element.order_no}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="order_date">
+            <th mat-header-cell *matHeaderCellDef> Order Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.order_date}} </td>
+          </ng-container>
+    
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+          </ng-container>
+
+        <ng-container matColumnDef="revenue">
+            <th mat-header-cell *matHeaderCellDef> Revenue </th>
+            <td mat-cell *matCellDef="let element"> {{element.revenue}} </td>
+          </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+       
+      </table>
+ </div><br><br>

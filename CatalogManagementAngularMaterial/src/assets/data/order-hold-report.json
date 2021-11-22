@@ -1,0 +1,12 @@
+[
+    {"hold_type":"ApprovalHold","orders":24,"resolved_orders":4,"unresolved_orders":20},
+    {"hold_type":"Col2CustContHold","orders":24,"resolved_orders":4,"unresolved_orders":20},
+    {"hold_type":"OrderLineHold","orders":16,"resolved_orders":0,"unresolved_orders":16},
+    {"hold_type":"OrderLineHold1","orders":16,"resolved_orders":0,"unresolved_orders":16},
+    {"hold_type":"OrderLineHold2","orders":16,"resolved_orders":0,"unresolved_orders":16},
+    {"hold_type":"OrderLineHold3","orders":16,"resolved_orders":0,"unresolved_orders":16},
+    {"hold_type":"OrderLineHold4","orders":16,"resolved_orders":0,"unresolved_orders":16},
+    {"hold_type":"OrderLineHold5","orders":16,"resolved_orders":0,"unresolved_orders":16},
+    {"hold_type":"Colony22Ent","orders":16,"resolved_orders":0,"unresolved_orders":16},
+    {"hold_type":"DVDMp3file","orders":16,"resolved_orders":0,"unresolved_orders":16}
+]

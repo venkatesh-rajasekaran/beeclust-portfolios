@@ -1,6 +1,6 @@
 .my-custom-class{background-color: antiquewhite;font-size:30px;width:50%;} 
 
-.example-card{padding:3%;background-color :white;margin: 6%;}
+.example-card{padding:4%;background-color :white;margin: 4%;}
 
 .mat-form-field{width:260px;}
 
@@ -10,7 +10,7 @@
 
 span{padding-right: 30px;}
 
-.card-wrapper{display: flex;justify-content: center;align-items: center;}
+.card-wrapper{display: flex;justify-content: center;align-items: center;height: 82%;}
 
 #outline1{width:35%;align-content: center;fill: #d3e3f8;}
 

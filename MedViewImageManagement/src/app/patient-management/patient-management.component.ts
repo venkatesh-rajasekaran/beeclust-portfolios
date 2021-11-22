@@ -33,13 +33,18 @@ export class PatientManagementComponent implements AfterViewInit {
   isClicked: boolean = false;
   isDisabledprev!: boolean;
   isDisablednext!: boolean;
+  disablePrevImageThumbnailBtn !: boolean;
+  disableNextImageThumbnailBtn !: boolean;
   selectedPatientvideosLength!: number;
+  selectedPatientImagesLength!: number;
   selectedPatientId!: Number;  
   indexOfSelectedvideo!: number;
   isSelected: boolean = false;
-  isPlay: boolean = false;
-  isDisabledprevBtn!: boolean;
-  isDisablednextBtn!: boolean;
+  isPlay: boolean = false;  
+  disablePrevVideoThumbnailBtn!: boolean;
+  disableNextVideoThumbnailBtn!: boolean;
+  disablePrevMainWndBtn!: boolean;
+  disableNextMainWndBtn!: boolean;
   playpause: string = "assets/images/Play.png";
 
   //console.log(selectedPatientImages.length==selectedImageIndex);
@@ -71,28 +76,21 @@ export class PatientManagementComponent implements AfterViewInit {
 
     this.selectedPatientVideos = patientsMap.get('clinicalVideos');
     this.selectedPatientvideosLength = this.selectedPatientVideos.length;
+    this.selectedPatientImagesLength = this.selectedPatientImages.length;
     console.log(this.selectedPatientvideosLength - 1);
-    //thumnail icons 
-    if (this.selectedPatientvideosLength <= 6) {
-      this.isDisablednext = true;
-      this.isDisabledprev = true;
-    }
-    else {
-      this.isDisablednext = false;
-      this.isDisabledprev = true;
-    }
+    this.disableImageThumbnailNavButtons();
+    this.disableVideoThumbnailNavButtons();
   }
+
   //thumnail icon methods 
   next() {
-    this.isClicked = true;
-    this.isDisablednext = true;
-    this.isDisabledprev = false;
-
+    this.k = this.k + 6;
+    this.disableVideoThumbnailNavButtons();
   }
+
   previous() {
-    this.isClicked = false;
-    this.isDisabledprev = true;
-    this.isDisablednext = false;
+    this.k = this.k - 6;
+    this.disableVideoThumbnailNavButtons();
   }
 
   //main video
@@ -100,41 +98,22 @@ export class PatientManagementComponent implements AfterViewInit {
     this.isVideoSelected=true;
     this.isImageSelected=false;
     console.log(this.isVideoSelected);
-    this.indexOfSelectedvideo = indexofvideo;
-
-    if (this.indexOfSelectedvideo == 0) {
-      this.isDisabledprevBtn = true;
-      this.isDisablednextBtn = false;
-    }
-    else if (this.indexOfSelectedvideo == this.selectedPatientvideosLength - 1) {
-      this.isDisablednextBtn = true;
-      this.isDisabledprevBtn = false;
-    }
-    else {
-      this.isDisablednextBtn = false;
-      this.isDisabledprevBtn = false;
-    }
+    this.indexOfSelectedvideo = indexofvideo; 
   }
 
   //main video icon methods
   goToprev() {
-    if (this.indexOfSelectedvideo == 0)
-      this.isDisabledprevBtn = true;
-    else {
+    if (this.indexOfSelectedvideo > 0) {
       this.indexOfSelectedvideo -= 1;
-      this.isDisabledprevBtn = false;
-      this.isDisablednextBtn = false;
     }
+    this.togglePreviewWindowNavButtons();
   }
-  goTonext() {
 
-    if (this.indexOfSelectedvideo == this.selectedPatientvideosLength - 1)
-      this.isDisablednextBtn = true;
-    else {
+  goTonext() {
+    if (this.indexOfSelectedvideo < this.selectedPatientvideosLength) {
       this.indexOfSelectedvideo += 1;
-      this.isDisablednextBtn = false;
-      this.isDisabledprevBtn = false;
     }
+    this.togglePreviewWindowNavButtons();
   }
 
   playPause() {
@@ -162,23 +141,81 @@ export class PatientManagementComponent implements AfterViewInit {
     if (this.selectedImageIndex + 1 < this.selectedPatientImages.length) {
       this.selectedImageIndex++;
     }//end of if loop
+    this.togglePreviewWindowNavButtons();
   }
 
   //prev method for main Image
   prevImage() {
     if (this.selectedImageIndex > 0) {
       this.selectedImageIndex--;
-
     }//end of if loop
+    this.togglePreviewWindowNavButtons();
   }
 
   //Forward method for Thumbnail Image
   forward() {
     this.i = this.i + 6;
+    this.disableImageThumbnailNavButtons();
   }
 
   //Backward method for Thumbnail Image
   backward() {
     this.i = this.i - 6;
+    this.disableImageThumbnailNavButtons();
+  }
+
+  disableImageThumbnailNavButtons() {
+    //Image thumnail prev and next buttons
+    if (this.selectedPatientImagesLength <= 6) {
+      this.disablePrevImageThumbnailBtn = true;
+      this.disableNextImageThumbnailBtn = true;
+    }
+    else {
+      this.disableNextImageThumbnailBtn = !(this.i+6 < this.selectedPatientImagesLength);
+      this.disablePrevImageThumbnailBtn = !(this.i-6 >= 0);
+    }
+  }
+
+  disableVideoThumbnailNavButtons() {
+    //Image thumnail prev and next buttons
+    if (this.selectedPatientvideosLength <= 6) {
+      this.disablePrevVideoThumbnailBtn = true;
+      this.disableNextVideoThumbnailBtn = true;
+    }
+    else {
+      this.disableNextVideoThumbnailBtn = !(this.k+6 < this.selectedPatientvideosLength);
+      this.disablePrevVideoThumbnailBtn = !(this.k-6 >= 0);
+    }
+  }
+
+  togglePreviewWindowNavButtons() {
+    if (this.isImageSelected) {
+      if (this.selectedImageIndex == 0) {
+        this.disablePrevMainWndBtn = true;
+        this.disableNextMainWndBtn = false;
+      }
+      else if (this.selectedImageIndex+1 == this.selectedPatientImagesLength) {
+        this.disablePrevMainWndBtn = false;
+        this.disableNextMainWndBtn = true;        
+      }
+      else {        
+        this.disablePrevMainWndBtn = false;
+        this.disableNextMainWndBtn = false;         
+      }
+    }
+    else if (this.isVideoSelected) {
+      if (this.indexOfSelectedvideo == 0) {
+        this.disablePrevMainWndBtn = true;
+        this.disableNextMainWndBtn = false;        
+      }
+      else if (this.indexOfSelectedvideo+1 == this.selectedPatientvideosLength) {
+        this.disablePrevMainWndBtn = false;
+        this.disableNextMainWndBtn = true;         
+      }
+      else {
+        this.disablePrevMainWndBtn = false;
+        this.disableNextMainWndBtn = false;         
+      }
+    }
   }
 }

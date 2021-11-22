@@ -1,0 +1,28 @@
+table
+{
+    width:100%;
+      
+}
+
+div
+{
+   height: 100%;
+   margin: 1%;
+}
+
+th{background-color:rgb(58, 176, 180);font-size: 20px;color: white;}
+
+td{font-size: 15px;font-style: italic;background-color:gainsboro;}
+
+span{text-decoration: underline;text-decoration-color:rgb(15, 74, 77);}
+
+h2{color:rgb(15, 74, 77);}
+
+.button{
+    position:absolute;
+    cursor: pointer;
+    color: rgb(15, 74, 77);
+    margin-left: 90%;
+}
+
+::ng-deep .hide-arrow .mat-sort-header-arrow{color:white;opacity: 2 !important;}
