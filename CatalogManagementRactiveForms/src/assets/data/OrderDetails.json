@@ -1,0 +1,13 @@
+[
+   
+   {"ItemID":"GR1200/Phone","ItemDescription":"Component Item","Quantity":10,"OtherCharges":0.00,"LineTotal":0.00},
+   {"ItemID":"GR1201/Laptop","ItemDescription":"Component Item","Quantity":12,"OtherCharges":0.00,"LineTotal":0.00},
+   {"ItemID":"GR1202/Tablet","ItemDescription":"Component Item","Quantity":5,"OtherCharges":0.00,"LineTotal":0.00},
+   {"ItemID":"GR1203/Charger","ItemDescription":"None","Quantity":15,"OtherCharges":0.00,"LineTotal":0.00},
+   {"ItemID":"GR1204/EarBuds","ItemDescription":"None","Quantity":20,"OtherCharges":0.00,"LineTotal":0.00},
+   {"ItemID":"GR1205/Mouse","ItemDescription":"Component Item","Quantity":10,"OtherCharges":0.00,"LineTotal":0.00},
+   {"ItemID":"GR1206/Keyboard","ItemDescription":"Component Item","Quantity":12,"OtherCharges":0.00,"LineTotal":0.00},
+   {"ItemID":"GR1207/PenDrive","ItemDescription":"Component Item","Quantity":40,"OtherCharges":0.00,"LineTotal":0.00},
+   {"ItemID":"GR1208/PowerBank","ItemDescription":"Component Item","Quantity":35,"OtherCharges":0.00,"LineTotal":0.00},
+   {"ItemID":"GR1209/4GB RAM","ItemDescription":"Component Item","Quantity":8,"OtherCharges":0.00,"LineTotal":0.00}
+  ]

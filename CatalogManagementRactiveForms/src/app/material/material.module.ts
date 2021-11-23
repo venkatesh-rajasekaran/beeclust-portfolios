@@ -13,6 +13,9 @@ import{ MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio';
+import{MatSidenavModule} from '@angular/material/sidenav';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 const MaterialComponents=[
@@ -30,7 +33,10 @@ const MaterialComponents=[
    MatSelectModule,
    MatIconModule,
    MatCardModule,
-   ReactiveFormsModule
+   ReactiveFormsModule,
+   MatSidenavModule,
+   MatPaginatorModule,
+   MatSortModule
 ]
 
 @NgModule({

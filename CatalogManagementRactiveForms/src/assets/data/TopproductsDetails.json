@@ -1,0 +1,12 @@
+[
+    {"Rank":1,"ItemID":"GR00027/Laptop","ItemDescription":"","UnitsSold":700,"UnitPrice":0.00,"Revenue":0.00},
+    {"Rank":2,"ItemID":"GR00027/Cable","ItemDescription":" Component Item ","UnitsSold":650,"UnitPrice":0.00,"Revenue":0.00},
+    {"Rank":2,"ItemID":"GR00027/Mobile","ItemDescription":"","UnitsSold":600,"UnitPrice":0.00,"Revenue":0.00},
+    {"Rank":4,"ItemID":"GR00027/Mouse","ItemDescription":"","UnitsSold":400,"UnitPrice":0.00,"Revenue":0.00},
+    {"Rank":5,"ItemID":"GR00027/PenDrive","ItemDescription":"","UnitsSold":250,"UnitPrice":0.00,"Revenue":0.00},
+    {"Rank":6,"ItemID":"GR00027/Wireless Mouse","ItemDescription":"","UnitsSold":200,"UnitPrice":0.00,"Revenue":0.00},
+    {"Rank":7,"ItemID":"GR00027/charger","ItemDescription":"","UnitsSold":100,"UnitPrice":0.00,"Revenue":0.00},
+    {"Rank":8,"ItemID":"GR00027/HeadPhone","ItemDescription":"","UnitsSold":80,"UnitPrice":0.00,"Revenue":0.00},
+    {"Rank":9,"ItemID":"GR00027/KeyBoard","ItemDescription":"","UnitsSold":60,"UnitPrice":0.00,"Revenue":0.00},
+    {"Rank":10,"ItemID":"GR00027/EarBuds","ItemDescription":"","UnitsSold":30,"UnitPrice":0.00,"Revenue":0.00}
+]

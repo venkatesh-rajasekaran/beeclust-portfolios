@@ -1,0 +1,9 @@
+[
+    {"Rank":1,"ItemID":"GR0010/Charger","ReturnReason":" No reason Given ","NoOfItemsReturned":30},
+    {"Rank":2,"ItemID":"GR0010/EarBuds","ReturnReason":" No reason Given ","NoOfItemsReturned":7},
+    {"Rank":3,"ItemID":"GR0010/Laptop","ReturnReason":" Low Performance ","NoOfItemsReturned":8},
+    {"Rank":4,"ItemID":"GR0010/Mobile","ReturnReason":" Quality ","NoOfItemsReturned":3},
+    {"Rank":5,"ItemID":"GR0010/Mouse","ReturnReason":" No reason Given ","NoOfItemsReturned":6},
+    {"Rank":6,"ItemID":"GR0010/PenDrive","ReturnReason":" No reason Given ","NoOfItemsReturned":1}   
+    
+]
