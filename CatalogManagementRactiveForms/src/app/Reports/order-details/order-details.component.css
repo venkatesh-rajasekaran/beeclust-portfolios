@@ -1,15 +1,7 @@
-#orderdetails
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
 div table
 {
-    width:800px;
-    /* margin: auto; */
+    width:1000px;
+    margin: auto;
 }
 div table th, table td
 {
@@ -38,14 +30,14 @@ div table tr:nth-child(odd):hover
 }
 mat-paginator
 {
-    width:800px;
+    width:1000px;
     margin:0 auto;
     margin-bottom: 10px;
 }
 div
 {
     margin-bottom: 30px;
-    height:600px;
+    height:350px;
     margin-top: 20px;
 }
 

@@ -4,8 +4,9 @@ import { Observable } from 'rxjs';
 import { Productinfo } from './Interfaces/productInfromation';
 import { OrderDetails } from './Interfaces/orderdetails';
 import { OrderonHolddetails } from './Interfaces/orderOnholdDetails';
-import { ReturnedproductsDetails } from './Interfaces/ReturnedproductsDetails';
+import { ReturnedproductsDetails } from './Interfaces/returnedProductsdetails';
 import { TopproductsDetails } from './Interfaces/topProductsDetails';
+import { Openorderdetails } from './Interfaces/openOrderdetails';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +32,8 @@ export class CatalogManagementService {
     private reportsUrl:string[]=["/assets/data/OrderDetails.json",
                                  "/assets/data/OrderonHolddetails.json",
                                  "/assets/data/ReturnedproductsDetails.json",
-                                 "/assets/data/TopproductsDetails.json"   
+                                 "/assets/data/TopproductsDetails.json",
+                                 "/assets/data/OpenordersDetails.json"   
                                 ];
 
     //reports related Data URL's
@@ -53,6 +55,9 @@ export class CatalogManagementService {
     }
     getTopproductsdetails():Observable<TopproductsDetails[]>{
       return this.httpClient.get<TopproductsDetails[]>(this.reportsUrl[3]);
+    }
+      getOpenordersdetails():Observable<Openorderdetails[]>{
+        return this.httpClient.get<Openorderdetails[]>(this.reportsUrl[4]);
     }
 
 }

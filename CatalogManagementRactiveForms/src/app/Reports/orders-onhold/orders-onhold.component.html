@@ -1,5 +1,5 @@
 <h3 style="text-align: center;margin-top: 20px;">Order on Hold Details Report</h3>
-<table style="margin-left: 210px;margin-top: 20px;">
+<table style="margin: 20px auto;">
     <tr ><td style="padding-bottom: 10px;">Date  </td><td style="padding-bottom: 10px;"> : Feb 25, 2021 </td><td style="padding-left: 10px;padding-bottom: 10px;">Time : </td><td style="padding-bottom: 10px;">09:40:10 AM</td>
         <td style="padding-left: 380px;font-size:20px;font-weight: 400;color: dodgerblue;">Order On Hold Details</td></tr>
         <tr><td>Enterprise  </td><td> : <u>BOSS Tech</u></td></tr>
@@ -7,10 +7,10 @@
         <tr><td>Document Type  </td><td>: <u> 0001</u></td></tr>
         <tr><td>Order Type</td><td> : OrderLine Hold</td></tr>
 </table>
-<hr style="width:805px;margin-left:210px;border-width: 0;height:2px;background-color: darkgray;">
+<hr style="width:953px;margin: 20px auto;border-width: 0;height:2px;background-color: darkgray;">
 
 <div class="mat-elavation-z8">
-    <table mat-table #orderdetails [dataSource]="datasource" matSort style="margin:5px auto;">
+    <table mat-table #orderdetails [dataSource]="datasource" matSort>
         
         <ng-container matColumnDef="Order No">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Order No </th>

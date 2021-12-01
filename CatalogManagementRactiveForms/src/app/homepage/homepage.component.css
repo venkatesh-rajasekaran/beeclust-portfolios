@@ -6,7 +6,7 @@ img
     background-size: cover;
     background-repeat: no-repeat;
     width:100%;
-    height:90vh;
+    height:100vh;
 }
 .glass
 {
@@ -17,9 +17,7 @@ img
       margin-left:50%;
       top:25%;
       line-height: 70px;  
-     /* margin-top:10px; */
-     /* color:white !important ; */
-     padding:70px 10px;     
+      padding:70px 10px;     
      border-style: solid grey;
      border-radius: 7px;
      box-shadow:3px 3px rgba(0, 0,0,0.2) ;
@@ -31,4 +29,5 @@ p
 {
     color:white;
     font-size: 30px;
+    padding: 50px;
 }

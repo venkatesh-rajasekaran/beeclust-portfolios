@@ -1,14 +1,14 @@
 <h3 style="text-align: center;margin-top: 20px;">Returned Products Details Report</h3>
-<table style="margin-left: 210px;margin-top: 20px;">
+<table style="margin: 20px auto;">
     <tr ><td style="padding-bottom: 10px;">Date  </td><td style="padding-bottom: 10px;"> : Feb 25, 2021 </td><td style="padding-left: 10px;padding-bottom: 10px;">Time : </td><td style="padding-bottom: 10px;">09:40:10 AM</td>
         <td style="padding-left: 380px;font-size:20px;font-weight: 400;color: dodgerblue;">Returned Products Details</td></tr>
         <tr><td>Enterprise  </td><td> : <u>BOSS Tech</u></td></tr>
         <tr><td>Order Date  </td><td colspan="4" > : <u>BETWEEN APR 10,2021 10:30:20 AM and APR 16,2021 11:59:10 PM</u></td></tr>
 </table>
-<hr style="width:805px;margin-left:210px;border-width: 0;height:2px;background-color: darkgray;">
+<hr style="width:953px;margin: 20px auto;border-width: 0;height:2px;background-color: darkgray;">
 
 <div class="mat-elavation-z8">
-    <table mat-table #orderdetails [dataSource]="datasource" matSort style="margin:5px auto;">
+    <table mat-table #orderdetails [dataSource]="datasource" matSort>
         
         <ng-container matColumnDef="Rank">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Rank</th>

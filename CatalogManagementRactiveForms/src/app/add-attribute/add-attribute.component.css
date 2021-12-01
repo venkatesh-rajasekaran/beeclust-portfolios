@@ -4,6 +4,7 @@
     height:323px;    
     margin:0 auto;
     margin-top:50px;
+    /* margin-bottom: 200px; */
     padding:10px 10px;
     font-weight: 400;   
     background-color:lightgrey;
@@ -25,6 +26,7 @@ td
     /* width:220px; */
     padding:3px 3px;
 }
+
 
 mat-label
 {

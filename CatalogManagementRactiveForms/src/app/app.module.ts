@@ -19,6 +19,7 @@ import { OrderDetailsComponent } from './Reports/order-details/order-details.com
 import { OrdersOnholdComponent } from './Reports/orders-onhold/orders-onhold.component';
 import { ReturnedProductsComponent } from './Reports/returned-products/returned-products.component';
 import { TopProductsComponent } from './Reports/top-products/top-products.component';
+import { OpenOrderComponent } from './Reports/open-order/open-order.component';
 
 const routes:Routes=[
   {path:'',component :HomepageComponent},
@@ -32,6 +33,8 @@ const routes:Routes=[
   {path:'reports/orders-on-hold-report',component:OrdersOnholdComponent},
   {path:'reports/returned-products-report',component:ReturnedProductsComponent},
   {path:'reports/top-products-report',component:TopProductsComponent},
+  {path:'reports/open-order-report',component:OpenOrderComponent}
+
 ];
 
 
@@ -49,7 +52,8 @@ const routes:Routes=[
     OrderDetailsComponent,
     OrdersOnholdComponent,
     ReturnedProductsComponent,
-    TopProductsComponent
+    TopProductsComponent,
+    OpenOrderComponent
     
 
   ],

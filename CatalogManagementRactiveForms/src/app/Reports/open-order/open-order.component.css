@@ -1,0 +1,47 @@
+div table
+{
+    width:1200px;
+    margin: auto;
+}
+div table th, table td
+{
+    padding: 10px;
+}
+div table th
+{
+    background-color: darkgrey;
+    color:white;
+   font-size: 1rem;
+}
+/* div table tr:nth-child(even)
+{
+    background-color: lightgrey;
+} */
+div table tr:nth-child(even):hover
+{
+    background-color:#ccf5ff;
+    border:2px solid darkgrey;
+}
+div table tr:nth-child(odd):hover
+{
+    background-color:#ccf5ff;
+    border:2px solid darkgrey;
+    
+}
+div table tr:nth-child(2),tr:nth-child(9),tr:nth-child(10)
+{
+    background-color:lightgray;
+}
+mat-paginator
+{
+    width:1200px;
+    margin:0 auto;
+    margin-bottom: 10px;
+}
+div
+{
+    margin-bottom: 30px;
+    height:600px;
+    margin-top: 20px;
+}
+

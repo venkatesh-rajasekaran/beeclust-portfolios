@@ -1,10 +1,10 @@
 <h3 style="text-align: center;margin-top: 20px;">Order Details Report</h3>
-<table #details style="margin-left: 210px;margin-top: 20px;">
+<table #details style="margin: 20px auto;">
     <tr><td>Date : </td><td>Feb 25, 2021 </td><td>Time : </td><td>09:40:10 AM</td><td style="padding-left: 380px;font-size:20px;font-weight: 400;color: dodgerblue;">Order Detail</td></tr>
 </table>
 <hr style="width:800px;border-width: 0;height:2px;background-color: darkgray;">
 <div class="mat-elavation-z8">
-<table mat-table #orderdetails [dataSource]="datasource" matSort style="margin:5px auto;">
+<table mat-table #orderdetails [dataSource]="datasource" matSort >
     
     <ng-container matColumnDef="Item ID">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Item ID </th>
