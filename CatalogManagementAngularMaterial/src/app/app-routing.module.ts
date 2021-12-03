@@ -14,7 +14,7 @@ import { HoldDetailsReportComponent } from './bi-reports/hold-details-report/hol
 import { OpenOrderReportComponent } from './bi-reports/open-order-report/open-order-report.component';
 
 const routes: Routes = [
-  { path:' ',redirectTo:'/home_page',pathMatch:'full'},
+  { path:'',redirectTo:'/home_page',pathMatch:'full'},
   { path: 'home_page', component:  Home_pageComponent},
   { path: 'product_item', component:  Product_itemComponent},
   { path: 'association_item', component:  Association_itemComponent},

@@ -1,14 +1,14 @@
 div{display: flex;justify-content: center;align-items: center;background-color: #B0C4DE;}
 
-.outline{border-radius:8;border-style: solid;border-width: 3px;border-color: navy;padding: 10px;}
+.outline{border-radius:8;border-style: solid;border-width: 3px;border-color: black;padding: 10px;}
 
 .mat-card{width:40%;align-content: center;}
 
-.my-custom-class{background-color: rgb(152, 128, 173);font-size:30px;width:30%;}  
+.my-custom-class{background-color:#DFEEEA;font-size:30px;width:30%;}  
 
 .example-card{background-color :white;width: auto;margin:2%;}
 
-fieldset{border:3px solid navy;}
+fieldset{border:3px solid black;}
 
 .card-wrapper{display: flex;justify-content: center;align-items: center;}
 

@@ -4,11 +4,11 @@ table{width:100%;}
  
 th{
     color:black;
-    background-color:rgb(58, 176, 180);
+    background-color:#5E8B7E;
     font-weight: 500;
     font-size: 20px;
 }
 
 td{font-size: 15px;}
 
-tr{background-color: rgb(179, 201, 243);}
+tr{background-color: gainsboro;}

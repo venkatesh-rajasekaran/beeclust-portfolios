@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-association_item',
   templateUrl: './association_item.component.html',
-  styleUrls: ['./association_item.component.css']
+  styleUrls: ['./association_item.component.css','./../app.component.css']
 })
 export class Association_itemComponent implements OnInit {
   selected = 'none';

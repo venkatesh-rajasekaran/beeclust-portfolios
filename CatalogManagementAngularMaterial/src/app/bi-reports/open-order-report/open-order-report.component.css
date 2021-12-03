@@ -4,11 +4,11 @@ table{width: 100%;}
 
 tr:nth-child(1){background-color:rgb(234, 238, 247);}
 
-tr:nth-child(2){background-color: rgb(138, 206, 206);}
+tr:nth-child(2){background-color: rgb(200, 223, 223);}
 
-tr:nth-child(9){background-color: rgb(138, 206, 206);}
+tr:nth-child(9){background-color: rgb(200, 223, 223);}
 
-tr:nth-child(10){background-color: rgb(138, 206, 206);}
+tr:nth-child(10){background-color: rgb(200, 223, 223);}
 
 tr:nth-child(3){background-color:rgb(234, 238, 247);}
 
@@ -46,6 +46,6 @@ tr:nth-child(21){background-color:rgb(234, 238, 247);}
 
 tr:nth-child(22){background-color:rgb(234, 238, 247);}
 
-th{background-color: rgb(31, 197, 197);font-size: 20px;font-weight: 500;color:black}
+th{background-color: #5E8B7E;font-size: 20px;font-weight: 500;color:black}
 
 td{font-size: 15px;font-weight: 500;}

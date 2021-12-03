@@ -22,6 +22,7 @@ import { HoldReportComponent } from './bi-reports/hold-order-report/hold-report.
 import { HoldDetailsReportComponent } from './bi-reports/hold-details-report/hold-details-report.component';
 import { OpenOrderReportComponent } from './bi-reports/open-order-report/open-order-report.component';
  
+
 @NgModule({
   declarations: [
     AppComponent,

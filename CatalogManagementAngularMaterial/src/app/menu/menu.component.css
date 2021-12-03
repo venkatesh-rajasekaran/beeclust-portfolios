@@ -1,11 +1,11 @@
-.mat-card{background-color: darkcyan;height:4%;}
+.mat-card{background-color: #5E8B7E;height:4%;}
 
-.mat-button{color:darkcyan;background-color: rgb(87, 194, 194);float:right;margin-left: 9px;}
+.mat-button{color:black;background-color: #DFEEEA;float:right;margin-left: 9px;}
 
 .center{background-color: white;color: black;padding-left: 0%;}
 
-#span1{color:white;font-size: 22px;font-family: Lucida Calligraphy;}
+#span1{color:black;font-size: 22px;font-family: Lucida Calligraphy;}
 
 .mat-menu{word-spacing: 10px;}
 
-h4{color: rgb(12, 105, 105);font-weight: 600;}
+h4{color: black;font-weight: 600;}

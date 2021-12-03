@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-catalog_configuration',
   templateUrl: './catalog_configuration.component.html',
-  styleUrls: ['./catalog_configuration.component.css']
+  styleUrls: ['./catalog_configuration.component.css','./../app.component.css']
 })
 export class Catalog_configurationComponent implements OnInit {
 

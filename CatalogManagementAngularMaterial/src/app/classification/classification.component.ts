@@ -5,7 +5,7 @@ import { CatalogService } from '../catalog.service';
 @Component({
   selector: 'app-classification',
   templateUrl: './classification.component.html',
-  styleUrls: ['./classification.component.css']
+  styleUrls: ['./classification.component.css','./../app.component.css']
 })
 export class ClassificationComponent implements OnInit {
   public catalogs:any=[]; 

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-uom_details',
   templateUrl:'./uom_details.component.html',
-  styleUrls: ['./uom_details.component.css']
+  styleUrls: ['./uom_details.component.css','./../app.component.css']
 })
 export class Uom_detailsComponent implements OnInit {
 

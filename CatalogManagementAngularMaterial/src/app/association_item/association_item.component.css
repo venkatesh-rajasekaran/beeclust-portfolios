@@ -1,4 +1,4 @@
-.outline{border-radius:8;border-style: solid;border-width: 3px;border-color: rgb(3, 33, 99);padding: 25px;}
+.outline{border-radius:8;border-style: solid;border-width: 3px;border-color: #5E8B7E;padding: 25px;}
 
 #outline{width:45%;}
 
@@ -8,7 +8,7 @@
 
 .example-card{padding:2%;background-color :white;width:60%;margin:5px;}
 
-.my-custom-class{background-color: #577eb1;font-size:30px;width:40%;}
+.my-custom-class{background-color: #DFEEEA;font-size:30px;width:30%;}
 
 #p{width:40%;}
 
@@ -16,7 +16,7 @@
 
  .mat-form-field{width:285px;}
   
- .mat-card-header{background-color: rgb(3, 33, 99);}
+ .mat-card-header{background-color: #5E8B7E;}
 
 #button{
     background-color: white;border:2px solid white;height: 38px;
