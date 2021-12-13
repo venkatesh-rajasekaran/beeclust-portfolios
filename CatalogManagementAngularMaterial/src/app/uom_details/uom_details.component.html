@@ -3,79 +3,115 @@
   <mat-card class="example-card">
 
     <mat-card-content class="outline">
-      <span style="padding-right: 8%;font-weight: 600;color: black;">Alternate UOM</span>&nbsp;&nbsp;
-      <mat-form-field appearance="outline">
-        <mat-select>
-          <mat-option value="Measurement">Measurement</mat-option>
-          <mat-option value="Piece">Piece</mat-option>
-          <mat-option value="Kilogram">Kilogram</mat-option>
-        </mat-select>
-      </mat-form-field><span style="padding-right: 8%;"></span>
+      <table class="mat-table">
+        <tr class="mat-row">
+          <td class="mat-cell" style="margin-right:0px;">Alternate UOM</td>
+          <td class="mat-cell" style="margin-left: 2px;">
+            <mat-form-field>
+              <mat-select>
+                <mat-option value="Measurement">Measurement</mat-option>
+                <mat-option value="Piece">Piece</mat-option>
+                <mat-option value="Kilogram">Kilogram</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+          <td class="mat-cell" style="margin-right: 2px;">Conversion Quantity to Inventory UOM</td>
+          <td class="mat-cell">
+            <mat-form-field>
+              <mat-select>
+                <mat-option value="Customer UOM">Customer UOM</mat-option>
+                <mat-option value="Stocking UOM">Stocking UOM</mat-option>
+                <mat-option value="Alternate UOM">Alternate UOM</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+        </tr>
 
-      <span style="padding-right:4%;font-weight: 600;color: black;">Conversion Quantity to Inventory UOM</span>
-      <mat-form-field appearance="outline">
-        <mat-select>
-          <mat-option value="Customer UOM">Customer UOM</mat-option>
-          <mat-option value="Stocking UOM">Stocking UOM</mat-option>
-          <mat-option value="Alternate UOM">Alternate UOM</mat-option>
-        </mat-select>
-      </mat-form-field><br>
+        <tr class="mat-row">
+          <td class="mat-cell">Positive Package Tolerance Qty</td>
+          <td class="mat-cell"><input class="my-custom-class" matInput>
+          </td>
+          <td class="mat-cell">Negative Package Tolerance Qty</td>
+          <td class="mat-cell"><input class="my-custom-class" matInput>
+          </td>
+        </tr><br>
+        <tr class="mat-row">
+          <td class="mat-cell">
+            <mat-checkbox [disabled]="true">Orders Can Be Placed Using this UOM</mat-checkbox>
+          </td>
+        </tr><br>
 
-      <span style="padding-right:2%;font-weight: 600;color: black;">Positive Package Tolerance Qty</span>&nbsp;<input class="my-custom-class" style="font-size:30px;width:17%;" matInput><span style="padding-right:3%;"></span><span style="padding-left: 4%;font-weight: 600;color: black;">Negative
-        Package Tolerance Qty</span><span style="padding-left: 8%;"></span><input class="my-custom-class" style="font-size:30px;width:17%;" matInput> <br><br>
-      <mat-checkbox [disabled]="true"><span>Orders Can Be Placed Using this UOM</span></mat-checkbox>
-      &nbsp;&nbsp;<br><br>
-
+      </table>
       <fieldset>
-        <legend style="color:black;font-weight: 600;"><b>Unit Dimensions</b></legend>
+        <legend style="color:darkcyan;font-weight: 500;"><b>Unit Dimensions</b></legend>
+        <table class="mat-table">
+          <tr class="mat-row">
+            <td class="mat-cell">Length</td>
+            <td class="mat-cell"><input class="my-custom-class" matInput>
+            </td>
+            
+            <td class="mat-cell">Length UOM</td>
+            <td class="mat-cell">
+              <mat-form-field id="outline">
+                <mat-select>
+                  <mat-option value="Case">Case</mat-option>
+                  <mat-option value="Piece">Piece</mat-option>
+                  <mat-option value="Carton">Carton</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </tr>
 
-        <span style="padding-right:8%;font-size: 18px;font-weight: 700;color: black;">Length</span><input class="my-custom-class" matInput><span style="padding-right:11%;"></span><span style="padding-right:5%;font-size: 15px;color: black;font-weight: 700;">Length
-          UOM</span>
-        <mat-form-field appearance="fill" style="width:30%;">
-          <mat-select>
-            <mat-option value="Case">Case</mat-option>
-            <mat-option value="Piece">Piece</mat-option>
-            <mat-option value="Carton">Carton</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <br><br>
-        <span style="padding-right:8%;font-size: 18px;color: black;font-weight: 700;">Length</span><input class="my-custom-class" matInput><span style="padding-right:11%;"></span><span style="padding-right:5%;font-size: 15px;color: black;font-weight: 700;">Length
-          UOM</span>
-        <mat-form-field appearance="fill" style="width:30%;">
-          <mat-select>
-            <mat-option value="Disk">Disk</mat-option>
-            <mat-option value="Kilogram">Kilogram</mat-option>
-            <mat-option value="Millimeter">Millimeter</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <br><br>
+          <tr class="mat-row">
+            <td class="mat-cell">Length</td>
+            <td class="mat-cell"><input class="my-custom-class"  matInput>
+            </td>
+            <td class="mat-cell">Length UOM</td>
+            <td class="mat-cell">
+              <mat-form-field id="outline">
+                <mat-select>
+                  <mat-option value="Disk">Disk</mat-option>
+                  <mat-option value="Kilogram">Kilogram</mat-option>
+                  <mat-option value="Millimeter">Millimeter</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </tr>
 
-        <span style="padding-right:8%;font-size: 18px;color: black;font-weight: 700;">Height</span><input class="my-custom-class" matInput><span style="padding-right:11%;"></span> <span style="padding-right:5%;font-size: 15px;color: black;font-weight: 700;">
-          Height UOM</span>
-        <mat-form-field appearance="fill" style="width:30%;">
-          <mat-select>
-            <mat-option value="Forecast">Forecast</mat-option>
-            <mat-option value="Promotion">Promotion</mat-option>
-            <mat-option value="Demand">Demand</mat-option>
-          </mat-select>
-        </mat-form-field><br><br>
+          <tr class="mat-row">
+            <td class="mat-cell">Height</td>
+            <td class="mat-cell"><input class="my-custom-class" matInput>
+            </td>
+            <td class="mat-cell">Height UOM</td>
+            <td class="mat-cell">
+              <mat-form-field id="outline">
+                <mat-select>
+                  <mat-option value="Forecast">Forecast</mat-option>
+                  <mat-option value="Promotion">Promotion</mat-option>
+                  <mat-option value="Demand">Demand</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </tr>
 
-        <span style="padding-right:9%;font-size: 15px;font-weight: 700;color:black;">Width</span><input class="my-custom-class" matInput><span style="padding-right:12%;"></span> <span style="padding-right:6%;font-size: 15px;font-weight: 700;color: black;">Width
-          UOM</span>
-        <mat-form-field appearance="fill" style="width:30%;">
-          <mat-select>
-            <mat-option value="Kilogram">Kilogram</mat-option>
-            <mat-option value="Millimeter">Millimeter</mat-option>
-            <mat-option value="Measurement">Measurement</mat-option>
-          </mat-select>
-        </mat-form-field><br><br>
+          <tr class="mat-row">
+            <td class="mat-cell">Width</td>
+            <td class="mat-cell"><input class="my-custom-class" matInput>
+            </td>
+            <td class="mat-cell">Width UOM</td>
+            <td class="mat-cell">
+              <mat-form-field id="outline">
+                <mat-select>
+                  <mat-option value="Kilogram">Kilogram</mat-option>
+                  <mat-option value="Millimeter">Millimeter</mat-option>
+                  <mat-option value="Measurement">Measurement</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </tr>
 
+        </table>
       </fieldset>
     </mat-card-content>
   </mat-card>
- <!-- <br>
-  <button mat-button (click)='action1()' id="prev"
-    style="background-color: navy;color: whitesmoke;border-radius: 2px;">Prev</button><span style="padding: 15px;"></span>
-  <button mat-button (click)='action()' id="next"
-    style="background-color: navy;color: whitesmoke;border-radius: 2px;">Next</button>-->
 </div>

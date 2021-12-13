@@ -4,11 +4,11 @@ div{display: flex;justify-content: center;align-items: center;background-color: 
 
 .mat-card{width:40%;align-content: center;}
 
-.my-custom-class{background-color:#DFEEEA;font-size:30px;width:30%;}  
+.my-custom-class{background-color:#DFEEEA;}  
 
 .example-card{background-color :white;width: auto;margin:2%;}
 
-fieldset{border:3px solid black;}
+fieldset{border:3px solid black; width: fit-content; margin-left: 160px;}
 
 .card-wrapper{display: flex;justify-content: center;align-items: center;}
 
@@ -16,5 +16,12 @@ fieldset{border:3px solid black;}
   
 #prev{float: right;margin-top: 61%;margin-bottom: 1%;}
 
+.mat-form-field,.my-custom-class { width: 200px;}
+ 
+ td{ font-weight: bold;}
 
+ .mat-cell{
+    padding-left: 10px;
+    padding-right: 10px;
 
+}

@@ -2,65 +2,66 @@
 
    <mat-card class="example-card">
       <mat-card-header>
-         <mat-icon style="color:wheat;text-align: center;">folder</mat-icon><span
-            style="color: black;font-size: 25px;">&nbsp;&nbsp;Associated Item</span>
+         <span style="font-size: 20px;">Associated Item</span>
       </mat-card-header>
       <mat-card-content class="outline">
+         <table class="mat-table">
+            <tr class="mat-row">
+               <td class="mat-cell"> Item ID</td>
+               <td class="mat-cell"><input class="my-custom-class" matInput>
+               </td>
+            </tr>
 
-         <span style="padding-right: 35%;font-weight: 700;color: black;">Item ID</span>
-         <mat-form-field appearance="fill" id="outline">
-            <mat-select [(value)]="selected1">
-               <mat-option>None</mat-option>
-               <mat-option value="Active">Active</mat-option>
-               <mat-option value="Actual Start">Actual Start</mat-option>
-               <mat-option value="Actual End">Actual End</mat-option>
-            </mat-select>
-         </mat-form-field>
-         <p style="padding-left: 50%;color: rgb(13, 95, 18);font-size: 15px;font-weight: 600;">Your selected Item is <span
-               style="font-family: Lucida Calligraphy;color:black;"> {{selected1}}</span></p><br><br>
+            <tr class="mat-row">
+               <td class="mat-cell">UOM</td>
+               <td class="mat-cell">
+                  <mat-form-field>
+                     <mat-select [(value)]="selected">
+                        <mat-option>None</mat-option>
+                        <mat-option value="Pack">Pack</mat-option>
+                        <mat-option value="Kilogram">Kilogram</mat-option>
+                        <mat-option value="Dozen">Dozen</mat-option>
+                     </mat-select>
+                  </mat-form-field>
+               </td>
+            </tr>
 
-         <span style="padding-right: 37%;font-weight: 700;color: black;">UOM</span>
-         <mat-form-field appearance="fill" id="outline">
-            <mat-select [(value)]="selected">
-               <mat-option>None</mat-option>
-               <mat-option value="Pack">Pack</mat-option>
-               <mat-option value="Kilogram">Kilogram</mat-option>
-               <mat-option value="Dozen">Dozen</mat-option>
-            </mat-select>
-         </mat-form-field>
-         <p style="padding-left: 50%;color: rgb(13, 95, 18);font-size: 15px;font-weight: 600;">Your selected Item is <span
-               style="font-family: Lucida Calligraphy;color:black;">{{selected}}</span></p>
-         <br><br>
+            <tr class="mat-row">
+               <td class="mat-cell">Effective Date from</td>
+               <td class="mat-cell">
+                  <mat-form-field>
+                     <input matInput [matDatepicker]="picker">
+                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                     <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+               </td>
+            </tr>
 
-         <span style="padding-right: 25%;font-weight: 700;color: black;">Effective Date from</span>
-         <mat-form-field appearance="outline" id="outline">
-            <input matInput [matDatepicker]="picker">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-         </mat-form-field><br>
+            <tr class="mat-row">
+               <td class="mat-cell">Effective Date to</td>
+               <td class="mat-cell">
+                  <mat-form-field>
+                     <input matInput [matDatepicker]="picker1">
+                     <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                     <mat-datepicker #picker1></mat-datepicker>
+                  </mat-form-field>
+               </td>
+            </tr>
 
-         <span style="padding-right: 27%;font-weight: 700;color: black;">Effective Date to</span>
-         <mat-form-field appearance="outline" id="outline">
-            <input matInput [matDatepicker]="picker1">
-            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-            <mat-datepicker #picker1></mat-datepicker>
-         </mat-form-field><br>
-
-         <span style="padding-right: 33%;font-weight: 700;color: black;">Quantity</span> <input class="my-custom-class"
-            style="font-size:30px;width:45%;" matInput> <br><br>
-         <span style="padding-right: 34%;font-weight: 700;color: black;">Priority</span> <input class="my-custom-class"
-            style="font-size:30px;width:45%;" matInput> <br><br>
-
+            <tr class="mat-row">
+               <td class="mat-cell">Quantity</td>
+               <td class="mat-cell"><input class="my-custom-class" matInput></td>
+            </tr><br>
+            <tr class="mat-row">
+               <td class="mat-cell">Priority</td>
+               <td class="mat-cell"><input class="my-custom-class" matInput></td>
+            </tr>
+         </table>
       </mat-card-content>
 
       <button mat-stroked-button #tooltip="matTooltip" matTooltip="Your changes are recorded" matTooltipPosition="left"
-         style="float: right;margin-right: 5px;color:black;background-color:#5E8B7E;">Cancel</button>&nbsp;
+         style="background-color:#5E8B7E;font-weight:600;float: right;margin-right: 5px;">Cancel</button>&nbsp;
       <button mat-stroked-button (click)="tooltip.show()"
-         style="float: right;margin-right: 5px;background-color:#5E8B7E;color:black;">Ok</button>
+         style="background-color:#5E8B7E;font-weight:600;float: right;margin-right: 5px">Ok</button>
    </mat-card><br><br>
-   <!--<button mat-button (click)='action1()' id="prev"
-      style="background-color:blue;color: whitesmoke;border-radius: 2px;">Prev</button><span
-      style="padding: 30px;"></span>
-   <button mat-button (click)='action()' id="next"
-      style="background-color: blue;color: whitesmoke;border-radius: 2px;">Next</button>-->
 </div>

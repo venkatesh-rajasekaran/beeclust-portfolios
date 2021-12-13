@@ -4,7 +4,7 @@ div{display: flex;justify-content: center;align-items: center;background-color: 
 
 .mat-card{width:auto;align-content: center;}
 
-.my-custom-class{background-color: #DFEEEA;font-size:15px;width:30%; margin-left:10px;}  
+.my-custom-class{background-color: #DFEEEA;font-size:15px;}  
 
 #btn{color:aliceblue;background-color: #2F5D62;border:1px solid whitesmoke;width:20%;}
 
@@ -17,3 +17,12 @@ div{display: flex;justify-content: center;align-items: center;background-color: 
 #next{float: right;margin-top: 50%;margin-bottom: 1%;}
 
 #prev{float: right;margin-top: 50%;margin-bottom: 1%;} 
+.mat-form-field,.my-custom-class { width: 180px;}
+ 
+ td{ font-weight: bold;}
+
+.mat-cell{
+    padding-left: 10px;
+    padding-right: 10px;
+
+}

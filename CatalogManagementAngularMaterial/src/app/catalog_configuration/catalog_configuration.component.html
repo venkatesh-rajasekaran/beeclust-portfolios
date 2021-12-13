@@ -1,5 +1,5 @@
 <div>
-    <mat-card class="example-card" style="border: #2F5D62;border-style: solid;">
+    <mat-card style="border: #2F5D62;border-style: solid;">
         <button mat-stroked-button id="btn">
             <mat-icon>mood</mat-icon>Other Attributes
         </button><button mat-stroked-button id="btn">
@@ -23,17 +23,31 @@
 
         <fieldset>
             <legend>Additional Attributes</legend>
-            <span style="padding-left: 5%;"></span>Attr&nbsp;<input class="my-custom-class" matInput><span
-                style="padding-left: 10%;"></span>References&nbsp;<input class="my-custom-class" matInput>
+            <table class="mat-table">
+                <tr class="mat-row">
+                    <td class="mat-cell">Attr</td>
+                    <td class="mat-cell"><input class="my-custom-class" matInput>
+                    </td>
+                    <td>References</td>
+                    <td class="mat-cell"><input class="my-custom-class" matInput>
+                    </td>
+                </tr>
+            </table>
         </fieldset><br><br>
 
         <fieldset>
             <legend>Aliases</legend>
-            UPC code<span style="padding-left: 5%;"></span><input class="my-custom-class" matInput>
+            <table class="mat-table">
+                <tr class="mat-row">
+                    <td class="mat-cell">UPC code</td>
+                    <td><input class="my-custom-class" matInput>
+                    </td>
+                </tr>
+            </table>
         </fieldset><br><br>
 
         <fieldset>
-            <legend>Item Execluted Codes</legend>
+            <legend>Item Executed Codes</legend>
             <div class="left">
                 <fieldset>
                     <legend>Available</legend>
@@ -68,6 +82,4 @@
         </fieldset>
 
     </mat-card><br>
-  <!--  <button mat-button (click)='action()' id="prev"
-        style="background-color: navy;color: whitesmoke;border-radius: 2px;">Prev</button>-->
 </div>

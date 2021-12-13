@@ -6,16 +6,12 @@
 
  div{display: flex;justify-content: center;align-items: center;background-color: #B0C4DE;}
 
-.example-card{padding:2%;background-color :white;width:60%;margin:5px;}
+.example-card{padding:2%;background-color :white;margin:5px;}
 
-.my-custom-class{background-color: #DFEEEA;font-size:30px;width:30%;}
+.my-custom-class{background-color: #DFEEEA;}
 
 #p{width:40%;}
 
-.mat-icon{color:rgb(53, 53, 212);font-size: 28px;}
-
- .mat-form-field{width:285px;}
-  
  .mat-card-header{background-color: #5E8B7E;}
 
 #button{
@@ -27,3 +23,6 @@
   
   #prev{float: right;margin-top: 62%;margin-bottom: 1%;}
   
+  .mat-form-field,.my-custom-class { width: 200px;}
+ 
+ td{ font-weight: bold; padding-right: 20px;}
